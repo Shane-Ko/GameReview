@@ -1,0 +1,460 @@
+{
+    "spots": [
+        {
+            "id": 1,
+            "continentId": 1,
+            "country": "일본",
+            "description": "전통과 현대가 공존하는 감성 여행지",
+            "image": "",
+            "rating": 0,
+            "reviewCount": 0,
+            "tags": [
+                "감성",
+                "미식",
+                "온천"
+            ]
+        },
+        {
+            "id": 2,
+            "continentId": 1,
+            "country": "태국",
+            "description": "열대의 낭만과 화려한 사원의 나라",
+            "image": "",
+            "rating": 0,
+            "reviewCount": 0,
+            "tags": [
+                "휴양",
+                "미식",
+                "야시장"
+            ]
+        },
+        {
+            "id": 3,
+            "continentId": 1,
+            "country": "베트남",
+            "description": "저렴한 물가와 풍부한 자연이 매력",
+            "image": "",
+            "rating": 0,
+            "reviewCount": 0,
+            "tags": [
+                "가성비",
+                "미식",
+                "자연"
+            ]
+        },
+        {
+            "id": 4,
+            "continentId": 1,
+            "country": "필리핀",
+            "description": "에메랄드빛 바다와 산호섬의 천국",
+            "image": "",
+            "rating": 0,
+            "reviewCount": 0,
+            "tags": [
+                "휴양",
+                "다이빙",
+                "가족여행"
+            ]
+        },
+        {
+            "id": 5,
+            "continentId": 1,
+            "country": "대만",
+            "description": "야시장과 노스탤지어가 가득한 골목 여행",
+            "image": "",
+            "rating": 0,
+            "reviewCount": 0,
+            "tags": [
+                "미식",
+                "야시장",
+                "감성"
+            ]
+        },
+        {
+            "id": 6,
+            "continentId": 2,
+            "country": "이집트",
+            "description": "피라미드와 나일강, 문명의 발상지",
+            "image": "",
+            "rating": 0,
+            "reviewCount": 0,
+            "tags": [
+                "역사",
+                "유적",
+                "사막"
+            ]
+        },
+        {
+            "id": 7,
+            "continentId": 2,
+            "country": "모로코",
+            "description": "블루시티와 사하라의 이국적 풍경",
+            "image": "",
+            "rating": 0,
+            "reviewCount": 0,
+            "tags": [
+                "감성",
+                "사막",
+                "쇼핑"
+            ]
+        },
+        {
+            "id": 8,
+            "continentId": 2,
+            "country": "케냐",
+            "description": "사파리와 야생동물의 대자연",
+            "image": "",
+            "rating": 0,
+            "reviewCount": 0,
+            "tags": [
+                "사파리",
+                "자연",
+                "액티비티"
+            ]
+        },
+        {
+            "id": 9,
+            "continentId": 2,
+            "country": "남아프리카공화국",
+            "description": "희망봉과 와인 산지의 다채로운 매력",
+            "image": "",
+            "rating": 0,
+            "reviewCount": 0,
+            "tags": [
+                "자연",
+                "와인",
+                "사파리"
+            ]
+        },
+        {
+            "id": 10,
+            "continentId": 2,
+            "country": "탄자니아",
+            "description": "킬리만자로와 잔지바르의 원시적 아름다움",
+            "image": "",
+            "rating": 0,
+            "reviewCount": 0,
+            "tags": [
+                "트레킹",
+                "휴양",
+                "자연"
+            ]
+        },
+        {
+            "id": 11,
+            "continentId": 3,
+            "country": "프랑스",
+            "description": "예술과 미식, 낭만의 대명사",
+            "image": "",
+            "rating": 0,
+            "reviewCount": 0,
+            "tags": [
+                "미식",
+                "예술",
+                "쇼핑"
+            ]
+        },
+        {
+            "id": 12,
+            "continentId": 3,
+            "country": "이탈리아",
+            "description": "고대 로마부터 파스타까지, 감성의 나라",
+            "image": "",
+            "rating": 0,
+            "reviewCount": 0,
+            "tags": [
+                "미식",
+                "역사",
+                "감성"
+            ]
+        },
+        {
+            "id": 13,
+            "continentId": 3,
+            "country": "스페인",
+            "description": "정열의 플라멩코와 가우디의 도시",
+            "image": "",
+            "rating": 0,
+            "reviewCount": 0,
+            "tags": [
+                "미식",
+                "축제",
+                "건축"
+            ]
+        },
+        {
+            "id": 14,
+            "continentId": 3,
+            "country": "스위스",
+            "description": "알프스와 호수의 그림 같은 풍경",
+            "image": "",
+            "rating": 0,
+            "reviewCount": 0,
+            "tags": [
+                "자연",
+                "트레킹",
+                "신혼여행"
+            ]
+        },
+        {
+            "id": 15,
+            "continentId": 3,
+            "country": "그리스",
+            "description": "산토리니의 푸른 바다와 신화의 땅",
+            "image": "",
+            "rating": 0,
+            "reviewCount": 0,
+            "tags": [
+                "감성",
+                "휴양",
+                "신혼여행"
+            ]
+        },
+        {
+            "id": 16,
+            "continentId": 4,
+            "country": "브라질",
+            "description": "삼바와 아마존, 축제의 나라",
+            "image": "",
+            "rating": 0,
+            "reviewCount": 0,
+            "tags": [
+                "축제",
+                "자연",
+                "액티비티"
+            ]
+        },
+        {
+            "id": 17,
+            "continentId": 4,
+            "country": "페루",
+            "description": "마추픽추와 잉카 문명의 신비",
+            "image": "",
+            "rating": 0,
+            "reviewCount": 0,
+            "tags": [
+                "유적",
+                "트레킹",
+                "역사"
+            ]
+        },
+        {
+            "id": 18,
+            "continentId": 4,
+            "country": "아르헨티나",
+            "description": "탱고의 열정과 파타고니아의 대자연",
+            "image": "",
+            "rating": 0,
+            "reviewCount": 0,
+            "tags": [
+                "자연",
+                "미식",
+                "축제"
+            ]
+        },
+        {
+            "id": 19,
+            "continentId": 4,
+            "country": "칠레",
+            "description": "이스터섬과 파타고니아의 이색 풍경",
+            "image": "",
+            "rating": 0,
+            "reviewCount": 0,
+            "tags": [
+                "자연",
+                "와인",
+                "트레킹"
+            ]
+        },
+        {
+            "id": 20,
+            "continentId": 4,
+            "country": "볼리비아",
+            "description": "우유니 소금사막의 환상적인 하늘 거울",
+            "image": "",
+            "rating": 0,
+            "reviewCount": 0,
+            "tags": [
+                "감성",
+                "자연",
+                "사진"
+            ]
+        },
+        {
+            "id": 21,
+            "continentId": 5,
+            "country": "미국",
+            "description": "동부 도시부터 서부 자연까지 무한한 스펙트럼",
+            "image": "",
+            "rating": 0,
+            "reviewCount": 0,
+            "tags": [
+                "쇼핑",
+                "자연",
+                "테마파크"
+            ]
+        },
+        {
+            "id": 22,
+            "continentId": 5,
+            "country": "캐나다",
+            "description": "로키산맥과 오로라의 광활한 대자연",
+            "image": "",
+            "rating": 0,
+            "reviewCount": 0,
+            "tags": [
+                "자연",
+                "오로라",
+                "트레킹"
+            ]
+        },
+        {
+            "id": 23,
+            "continentId": 5,
+            "country": "멕시코",
+            "description": "칸쿤의 휴양과 마야 문명의 흔적",
+            "image": "",
+            "rating": 0,
+            "reviewCount": 0,
+            "tags": [
+                "휴양",
+                "유적",
+                "미식"
+            ]
+        },
+        {
+            "id": 24,
+            "continentId": 5,
+            "country": "쿠바",
+            "description": "올드카와 재즈, 시간이 멈춘 도시",
+            "image": "",
+            "rating": 0,
+            "reviewCount": 0,
+            "tags": [
+                "감성",
+                "레트로",
+                "음악"
+            ]
+        },
+        {
+            "id": 25,
+            "continentId": 5,
+            "country": "코스타리카",
+            "description": "열대우림과 화산이 있는 에코 투어의 성지",
+            "image": "",
+            "rating": 0,
+            "reviewCount": 0,
+            "tags": [
+                "자연",
+                "액티비티",
+                "에코투어"
+            ]
+        },
+        {
+            "id": 26,
+            "continentId": 6,
+            "country": "호주",
+            "description": "오페라하우스부터 대산호초까지, 대륙의 다양성",
+            "image": "",
+            "rating": 0,
+            "reviewCount": 0,
+            "tags": [
+                "서핑",
+                "자연",
+                "가족여행"
+            ]
+        },
+        {
+            "id": 27,
+            "continentId": 6,
+            "country": "뉴질랜드",
+            "description": "반지의 제왕 촬영지, 피오르드의 나라",
+            "image": "",
+            "rating": 0,
+            "reviewCount": 0,
+            "tags": [
+                "자연",
+                "트레킹",
+                "액티비티"
+            ]
+        },
+        {
+            "id": 28,
+            "continentId": 6,
+            "country": "피지",
+            "description": "산호초와 코코넛 나무의 남태평양 낙원",
+            "image": "",
+            "rating": 0,
+            "reviewCount": 0,
+            "tags": [
+                "휴양",
+                "다이빙",
+                "신혼여행"
+            ]
+        },
+        {
+            "id": 29,
+            "continentId": 6,
+            "country": "괌",
+            "description": "가까운 미국령 휴양지, 면세 쇼핑의 매력",
+            "image": "",
+            "rating": 0,
+            "reviewCount": 0,
+            "tags": [
+                "휴양",
+                "면세쇼핑",
+                "가족여행"
+            ]
+        },
+        {
+            "id": 30,
+            "continentId": 6,
+            "country": "사이판",
+            "description": "수정처럼 맑은 바다의 조용한 휴양지",
+            "image": "",
+            "rating": 0,
+            "reviewCount": 0,
+            "tags": [
+                "휴양",
+                "다이빙",
+                "신혼여행"
+            ]
+        }
+    ],
+    "continents": [
+        {
+            "id": 1,
+            "continentName": "Asia"
+        },
+        {
+            "id": 2,
+            "continentName": "Africa"
+        },
+        {
+            "id": 3,
+            "continentName": "Europe"
+        },
+        {
+            "id": 4,
+            "continentName": "South America"
+        },
+        {
+            "id": 5,
+            "continentName": "North America"
+        },
+        {
+            "id": 6,
+            "continentName": "Oceania"
+        }
+    ],
+    "reviews": [
+        {
+            "id": 1,
+            "spotId": 1,
+            "author": "",
+            "rating": 5,
+            "content": "",
+            "createdAt": ""
+        }
+    ]
+}

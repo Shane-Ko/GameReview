@@ -1,6 +1,7 @@
 export interface Game {
-    id: number;
+    id: number | string;
     genreId: number;
+    genre?: Genre;
     title: string;
     developer: string;
     releaseYear: number;
@@ -11,13 +12,13 @@ export interface Game {
     tags: string[];
 }
 
-export interface Genres {
+export interface Genre {
     id: number;
     genreName: string;
 }
 
 export interface Review {
-    id: number;
+    id: number | string;
     gameId: number;
     author: string;
     rating: number;

@@ -1,539 +1,1411 @@
 {
-    "games": [
-        {
-            "id": 1,
-            "genreId": 1,
-            "title": "The Witcher 3: Wild Hunt",
-            "developer": "CD Projekt Red",
-            "releaseYear": 2015,
-            "description": "광활한 오픈월드에서 펼쳐지는 다크 판타지 RPG",
-            "image": "",
-            "rating": 0,
-            "reviewCount": 0,
-            "tags": [
-                "오픈월드",
-                "스토리",
-                "싱글플레이"
-            ]
-        },
-        {
-            "id": 2,
-            "genreId": 1,
-            "title": "Elden Ring",
-            "developer": "FromSoftware",
-            "releaseYear": 2022,
-            "description": "소울라이크 장르의 정점, 광활한 오픈월드 다크 판타지",
-            "image": "",
-            "rating": 0,
-            "reviewCount": 0,
-            "tags": [
-                "소울라이크",
-                "오픈월드",
-                "고난이도"
-            ]
-        },
-        {
-            "id": 3,
-            "genreId": 1,
-            "title": "The Elder Scrolls V: Skyrim",
-            "developer": "Bethesda",
-            "releaseYear": 2011,
-            "description": "자유도 높은 판타지 오픈월드의 대명사",
-            "image": "",
-            "rating": 0,
-            "reviewCount": 0,
-            "tags": [
-                "오픈월드",
-                "자유도",
-                "모드지원"
-            ]
-        },
-        {
-            "id": 4,
-            "genreId": 1,
-            "title": "Persona 5 Royal",
-            "developer": "Atlus",
-            "releaseYear": 2019,
-            "description": "스타일리시한 도쿄 배경 학원 판타지 JRPG",
-            "image": "",
-            "rating": 0,
-            "reviewCount": 0,
-            "tags": [
-                "JRPG",
-                "턴제",
-                "스토리"
-            ]
-        },
-        {
-            "id": 5,
-            "genreId": 1,
-            "title": "Baldur's Gate 3",
-            "developer": "Larian Studios",
-            "releaseYear": 2023,
-            "description": "D&D 룰 기반의 깊이 있는 CRPG 걸작",
-            "image": "",
-            "rating": 0,
-            "reviewCount": 0,
-            "tags": [
-                "CRPG",
-                "턴제",
-                "협동"
-            ]
-        },
-        {
-            "id": 6,
-            "genreId": 2,
-            "title": "Valorant",
-            "developer": "Riot Games",
-            "releaseYear": 2020,
-            "description": "전술적 5:5 캐릭터 기반 택티컬 슈터",
-            "image": "",
-            "rating": 0,
-            "reviewCount": 0,
-            "tags": [
-                "경쟁",
-                "택티컬",
-                "무료"
-            ]
-        },
-        {
-            "id": 7,
-            "genreId": 2,
-            "title": "Overwatch 2",
-            "developer": "Blizzard",
-            "releaseYear": 2022,
-            "description": "화려한 영웅들이 펼치는 팀 기반 슈팅",
-            "image": "",
-            "rating": 0,
-            "reviewCount": 0,
-            "tags": [
-                "팀플레이",
-                "영웅슈터",
-                "무료"
-            ]
-        },
-        {
-            "id": 8,
-            "genreId": 2,
-            "title": "Counter-Strike 2",
-            "developer": "Valve",
-            "releaseYear": 2023,
-            "description": "e스포츠의 클래식, 정통 택티컬 FPS",
-            "image": "",
-            "rating": 0,
-            "reviewCount": 0,
-            "tags": [
-                "e스포츠",
-                "경쟁",
-                "택티컬"
-            ]
-        },
-        {
-            "id": 9,
-            "genreId": 2,
-            "title": "Apex Legends",
-            "developer": "Respawn",
-            "releaseYear": 2019,
-            "description": "빠른 무빙과 팀플레이의 배틀로얄",
-            "image": "",
-            "rating": 0,
-            "reviewCount": 0,
-            "tags": [
-                "배틀로얄",
-                "팀플레이",
-                "무료"
-            ]
-        },
-        {
-            "id": 10,
-            "genreId": 2,
-            "title": "Call of Duty: Modern Warfare III",
-            "developer": "Sledgehammer Games",
-            "releaseYear": 2023,
-            "description": "긴장감 넘치는 밀리터리 FPS의 최신작",
-            "image": "",
-            "rating": 0,
-            "reviewCount": 0,
-            "tags": [
-                "밀리터리",
-                "멀티플레이",
-                "캠페인"
-            ]
-        },
-        {
-            "id": 11,
-            "genreId": 3,
-            "title": "God of War Ragnarok",
-            "developer": "Santa Monica Studio",
-            "releaseYear": 2022,
-            "description": "북유럽 신화를 배경으로 한 부자의 서사시",
-            "image": "",
-            "rating": 0,
-            "reviewCount": 0,
-            "tags": [
-                "스토리",
-                "액션",
-                "싱글플레이"
-            ]
-        },
-        {
-            "id": 12,
-            "genreId": 3,
-            "title": "Sekiro: Shadows Die Twice",
-            "developer": "FromSoftware",
-            "releaseYear": 2019,
-            "description": "일본 전국시대 배경의 검술 액션 걸작",
-            "image": "",
-            "rating": 0,
-            "reviewCount": 0,
-            "tags": [
-                "소울라이크",
-                "고난이도",
-                "싱글플레이"
-            ]
-        },
-        {
-            "id": 13,
-            "genreId": 3,
-            "title": "Bloodborne",
-            "developer": "FromSoftware",
-            "releaseYear": 2015,
-            "description": "고딕 호러 분위기의 소울라이크 명작",
-            "image": "",
-            "rating": 0,
-            "reviewCount": 0,
-            "tags": [
-                "소울라이크",
-                "다크판타지",
-                "고난이도"
-            ]
-        },
-        {
-            "id": 14,
-            "genreId": 3,
-            "title": "Devil May Cry 5",
-            "developer": "Capcom",
-            "releaseYear": 2019,
-            "description": "스타일리시 액션의 정점을 찍은 데빌헌터 액션",
-            "image": "",
-            "rating": 0,
-            "reviewCount": 0,
-            "tags": [
-                "콤보",
-                "스타일리시",
-                "핵앤슬래시"
-            ]
-        },
-        {
-            "id": 15,
-            "genreId": 3,
-            "title": "NieR: Automata",
-            "developer": "PlatinumGames",
-            "releaseYear": 2017,
-            "description": "철학적 스토리와 화려한 액션의 조화",
-            "image": "",
-            "rating": 0,
-            "reviewCount": 0,
-            "tags": [
-                "스토리",
-                "액션RPG",
-                "감성"
-            ]
-        },
-        {
-            "id": 16,
-            "genreId": 4,
-            "title": "Civilization VI",
-            "developer": "Firaxis Games",
-            "releaseYear": 2016,
-            "description": "'한 턴만 더'를 부르는 문명 발전 4X 게임",
-            "image": "",
-            "rating": 0,
-            "reviewCount": 0,
-            "tags": [
-                "4X",
-                "턴제",
-                "장시간플레이"
-            ]
-        },
-        {
-            "id": 17,
-            "genreId": 4,
-            "title": "StarCraft II",
-            "developer": "Blizzard",
-            "releaseYear": 2010,
-            "description": "e스포츠의 전설, 정통 RTS의 대명사",
-            "image": "",
-            "rating": 0,
-            "reviewCount": 0,
-            "tags": [
-                "RTS",
-                "e스포츠",
-                "경쟁"
-            ]
-        },
-        {
-            "id": 18,
-            "genreId": 4,
-            "title": "XCOM 2",
-            "developer": "Firaxis Games",
-            "releaseYear": 2016,
-            "description": "외계 침공에 맞서는 하드코어 턴제 전략",
-            "image": "",
-            "rating": 0,
-            "reviewCount": 0,
-            "tags": [
-                "턴제",
-                "고난이도",
-                "SF"
-            ]
-        },
-        {
-            "id": 19,
-            "genreId": 4,
-            "title": "Age of Empires IV",
-            "developer": "Relic Entertainment",
-            "releaseYear": 2021,
-            "description": "역사 속 문명들이 격돌하는 정통 RTS의 귀환",
-            "image": "",
-            "rating": 0,
-            "reviewCount": 0,
-            "tags": [
-                "RTS",
-                "역사",
-                "멀티플레이"
-            ]
-        },
-        {
-            "id": 20,
-            "genreId": 4,
-            "title": "Total War: Warhammer III",
-            "developer": "Creative Assembly",
-            "releaseYear": 2022,
-            "description": "판타지 세계의 대규모 실시간 전투 전략",
-            "image": "",
-            "rating": 0,
-            "reviewCount": 0,
-            "tags": [
-                "전략",
-                "판타지",
-                "대규모전투"
-            ]
-        },
-        {
-            "id": 21,
-            "genreId": 5,
-            "title": "Hollow Knight",
-            "developer": "Team Cherry",
-            "releaseYear": 2017,
-            "description": "아름다운 2D 메트로바니아 인디의 걸작",
-            "image": "",
-            "rating": 0,
-            "reviewCount": 0,
-            "tags": [
-                "메트로바니아",
-                "2D",
-                "감성"
-            ]
-        },
-        {
-            "id": 22,
-            "genreId": 5,
-            "title": "Stardew Valley",
-            "developer": "ConcernedApe",
-            "releaseYear": 2016,
-            "description": "힐링과 중독을 동시에 주는 농장 시뮬레이션",
-            "image": "",
-            "rating": 0,
-            "reviewCount": 0,
-            "tags": [
-                "힐링",
-                "농장",
-                "픽셀아트"
-            ]
-        },
-        {
-            "id": 23,
-            "genreId": 5,
-            "title": "Hades",
-            "developer": "Supergiant Games",
-            "releaseYear": 2020,
-            "description": "그리스 신화 배경의 로그라이크 액션 걸작",
-            "image": "",
-            "rating": 0,
-            "reviewCount": 0,
-            "tags": [
-                "로그라이크",
-                "액션",
-                "스토리"
-            ]
-        },
-        {
-            "id": 24,
-            "genreId": 5,
-            "title": "Celeste",
-            "developer": "Maddy Makes Games",
-            "releaseYear": 2018,
-            "description": "정교한 플랫포머와 따뜻한 스토리의 조화",
-            "image": "",
-            "rating": 0,
-            "reviewCount": 0,
-            "tags": [
-                "플랫포머",
-                "감성",
-                "고난이도"
-            ]
-        },
-        {
-            "id": 25,
-            "genreId": 5,
-            "title": "Undertale",
-            "developer": "Toby Fox",
-            "releaseYear": 2015,
-            "description": "선택이 만드는 이야기, 독특한 인디 RPG",
-            "image": "",
-            "rating": 0,
-            "reviewCount": 0,
-            "tags": [
-                "스토리",
-                "선택지",
-                "감성"
-            ]
-        },
-        {
-            "id": 26,
-            "genreId": 6,
-            "title": "The Sims 4",
-            "developer": "Maxis",
-            "releaseYear": 2014,
-            "description": "가상 인생을 자유롭게 설계하는 인생 시뮬레이션",
-            "image": "",
-            "rating": 0,
-            "reviewCount": 0,
-            "tags": [
-                "인생시뮬",
-                "자유도",
-                "샌드박스"
-            ]
-        },
-        {
-            "id": 27,
-            "genreId": 6,
-            "title": "Cities: Skylines",
-            "developer": "Colossal Order",
-            "releaseYear": 2015,
-            "description": "정교한 도시 건설 시뮬레이션의 대표작",
-            "image": "",
-            "rating": 0,
-            "reviewCount": 0,
-            "tags": [
-                "건설",
-                "경영",
-                "샌드박스"
-            ]
-        },
-        {
-            "id": 28,
-            "genreId": 6,
-            "title": "Football Manager 2024",
-            "developer": "Sports Interactive",
-            "releaseYear": 2023,
-            "description": "축구 감독의 모든 것을 담은 정교한 시뮬레이션",
-            "image": "",
-            "rating": 0,
-            "reviewCount": 0,
-            "tags": [
-                "스포츠",
-                "경영",
-                "장시간플레이"
-            ]
-        },
-        {
-            "id": 29,
-            "genreId": 6,
-            "title": "Microsoft Flight Simulator",
-            "developer": "Asobo Studio",
-            "releaseYear": 2020,
-            "description": "실제 지구를 그대로 옮긴 초정밀 비행 시뮬레이터",
-            "image": "",
-            "rating": 0,
-            "reviewCount": 0,
-            "tags": [
-                "시뮬레이터",
-                "고사양",
-                "리얼리티"
-            ]
-        },
-        {
-            "id": 30,
-            "genreId": 6,
-            "title": "Kerbal Space Program",
-            "developer": "Squad",
-            "releaseYear": 2015,
-            "description": "귀여운 커발과 함께하는 로켓 공학 시뮬레이션",
-            "image": "",
-            "rating": 0,
-            "reviewCount": 0,
-            "tags": [
-                "우주",
-                "물리엔진",
-                "샌드박스"
-            ]
-        }
-    ],
-    "genres": [
-        {
-            "id": 1,
-            "genreName": "RPG"
-        },
-        {
-            "id": 2,
-            "genreName": "FPS"
-        },
-        {
-            "id": 3,
-            "genreName": "Action"
-        },
-        {
-            "id": 4,
-            "genreName": "Strategy"
-        },
-        {
-            "id": 5,
-            "genreName": "Indie"
-        },
-        {
-            "id": 6,
-            "genreName": "Simulation"
-        }
-    ],
-    "reviews": [
-        {
-            "id": 1,
-            "gameId": 2,
-            "author": "다크소울팬",
-            "rating": 5,
-            "content": "인생 게임. 시간 순삭 주의",
-            "playTime": 120,
-            "createdAt": "2026-07-10T14:30:00.000Z"
-        },
-        {
-            "id": 2,
-            "gameId": 22,
-            "author": "농부",
-            "rating": 5,
-            "content": "새벽 3시까지 밭 갈고 있었어요",
-            "playTime": 200,
-            "createdAt": "2026-07-15T02:45:00.000Z"
-        },
-        {
-            "id": 3,
-            "gameId": 6,
-            "author": "익명",
-            "rating": 4,
-            "content": "재밌는데 팀운 심함",
-            "playTime": 80,
-            "createdAt": "2026-07-18T20:10:00.000Z"
-        }
-    ]
+  "games": [
+    {
+      "id": "1",
+      "genreId": 1,
+      "title": "The Witcher 3: Wild Hunt",
+      "developer": "CD Projekt Red",
+      "releaseYear": 2015,
+      "description": "광활한 오픈월드에서 펼쳐지는 다크 판타지 RPG",
+      "image": "/images/witcher.png",
+      "rating": 4.8,
+      "reviewCount": 4,
+      "tags": [
+        "오픈월드",
+        "스토리",
+        "싱글플레이"
+      ]
+    },
+    {
+      "id": "2",
+      "genreId": 1,
+      "title": "Elden Ring",
+      "developer": "FromSoftware",
+      "releaseYear": 2022,
+      "description": "소울라이크 장르의 정점, 광활한 오픈월드 다크 판타지",
+      "image": "/images/elden_ring.png",
+      "rating": 4.5,
+      "reviewCount": 4,
+      "tags": [
+        "소울라이크",
+        "오픈월드",
+        "고난이도"
+      ]
+    },
+    {
+      "id": "3",
+      "genreId": 1,
+      "title": "The Elder Scrolls V: Skyrim",
+      "developer": "Bethesda",
+      "releaseYear": 2011,
+      "description": "자유도 높은 판타지 오픈월드의 대명사",
+      "image": "/images/the_elder_scrolls_5.png",
+      "rating": 4.8,
+      "reviewCount": 4,
+      "tags": [
+        "오픈월드",
+        "자유도",
+        "모드지원"
+      ]
+    },
+    {
+      "id": "4",
+      "genreId": 1,
+      "title": "Red Dead Redemption 2",
+      "developer": "Rockstar Games",
+      "releaseYear": 2018,
+      "description": "1899년 미국 서부 개척 시대의 종말을 다룬 명작 오픈월드 액션 어드벤처",
+      "image": "/images/rdr2.png",
+      "rating": 4.3,
+      "reviewCount": 3,
+      "tags": [
+        "오픈월드",
+        "스토리",
+        "서부",
+        "액션"
+      ]
+    },
+    {
+      "id": "5",
+      "genreId": 1,
+      "title": "Cyberpunk 2077",
+      "developer": "CD Projekt Red",
+      "releaseYear": 2020,
+      "description": "어두운 미래 도시 나이트 시티를 배경으로 펼쳐지는 오픈월드 액션 RPG",
+      "image": "/images/cyberpunk.png",
+      "rating": 4.7,
+      "reviewCount": 3,
+      "tags": [
+        "오픈월드",
+        "SF",
+        "액션RPG",
+        "스토리"
+      ]
+    },
+    {
+      "id": "6",
+      "genreId": 2,
+      "title": "Valorant",
+      "developer": "Riot Games",
+      "releaseYear": 2020,
+      "description": "전술적 5:5 캐릭터 기반 택티컬 슈터",
+      "image": "/images/valorant.png",
+      "rating": 4,
+      "reviewCount": 3,
+      "tags": [
+        "경쟁",
+        "택티컬",
+        "무료"
+      ]
+    },
+    {
+      "id": "7",
+      "genreId": 2,
+      "title": "Tom Clancy's Rainbow Six Siege",
+      "developer": "Ubisoft",
+      "releaseYear": 2015,
+      "description": "지형지물 파괴와 전술 대원들의 능력을 활용하는 5v5 하드코어 택티컬 슈터",
+      "image": "/images/rainbow_six_siege.png",
+      "rating": 3.7,
+      "reviewCount": 3,
+      "tags": [
+        "택티컬",
+        "팀플레이",
+        "전략"
+      ]
+    },
+    {
+      "id": "8",
+      "genreId": 2,
+      "title": "Counter-Strike 2",
+      "developer": "Valve",
+      "releaseYear": 2023,
+      "description": "e스포츠의 클래식, 정통 택티컬 FPS",
+      "image": "/images/counter_strike_2.png",
+      "rating": 4.3,
+      "reviewCount": 3,
+      "tags": [
+        "e스포츠",
+        "경쟁",
+        "택티컬"
+      ]
+    },
+    {
+      "id": "9",
+      "genreId": 2,
+      "title": "Apex Legends",
+      "developer": "Respawn",
+      "releaseYear": 2019,
+      "description": "빠른 무빙과 팀플레이의 배틀로얄",
+      "image": "/images/apex_legends.png",
+      "rating": 4,
+      "reviewCount": 3,
+      "tags": [
+        "배틀로얄",
+        "팀플레이",
+        "무료"
+      ]
+    },
+    {
+      "id": "10",
+      "genreId": 2,
+      "title": "Call of Duty: Modern Warfare III",
+      "developer": "Sledgehammer Games",
+      "releaseYear": 2023,
+      "description": "긴장감 넘치는 밀리터리 FPS의 최신작",
+      "image": "/images/COD_MW3.png",
+      "rating": 3.3,
+      "reviewCount": 3,
+      "tags": [
+        "밀리터리",
+        "멀티플레이",
+        "캠페인"
+      ]
+    },
+    {
+      "id": "11",
+      "genreId": 3,
+      "title": "God of War Ragnarok",
+      "developer": "Santa Monica Studio",
+      "releaseYear": 2022,
+      "description": "북유럽 신화를 배경으로 한 부자의 서사시",
+      "image": "/images/GoW_RGK.png",
+      "rating": 3.8,
+      "reviewCount": 4,
+      "tags": [
+        "스토리",
+        "액션",
+        "싱글플레이"
+      ]
+    },
+    {
+      "id": "12",
+      "genreId": 3,
+      "title": "Sekiro: Shadows Die Twice",
+      "developer": "FromSoftware",
+      "releaseYear": 2019,
+      "description": "일본 전국시대 배경의 검술 액션 걸작",
+      "image": "/images/sekiro.png",
+      "rating": 4.3,
+      "reviewCount": 3,
+      "tags": [
+        "소울라이크",
+        "고난이도",
+        "싱글플레이"
+      ]
+    },
+    {
+      "id": "13",
+      "genreId": 3,
+      "title": "Bloodborne",
+      "developer": "FromSoftware",
+      "releaseYear": 2015,
+      "description": "고딕 호러 분위기의 소울라이크 명작",
+      "image": "/images/bloodborne.png",
+      "rating": 4.7,
+      "reviewCount": 3,
+      "tags": [
+        "소울라이크",
+        "다크판타지",
+        "고난이도"
+      ]
+    },
+    {
+      "id": "14",
+      "genreId": 3,
+      "title": "Devil May Cry 5",
+      "developer": "Capcom",
+      "releaseYear": 2019,
+      "description": "스타일리시 액션의 정점을 찍은 데빌헌터 액션",
+      "image": "/images/DMC5.png",
+      "rating": 4.3,
+      "reviewCount": 3,
+      "tags": [
+        "콤보",
+        "스타일리시",
+        "핵앤슬래시"
+      ]
+    },
+    {
+      "id": "15",
+      "genreId": 3,
+      "title": "NieR: Automata",
+      "developer": "PlatinumGames",
+      "releaseYear": 2017,
+      "description": "철학적 스토리와 화려한 액션의 조화",
+      "image": "/images/nier_automata.png",
+      "rating": 4.7,
+      "reviewCount": 3,
+      "tags": [
+        "스토리",
+        "액션RPG",
+        "감성"
+      ]
+    },
+    {
+      "id": "16",
+      "genreId": 4,
+      "title": "Civilization VI",
+      "developer": "Firaxis Games",
+      "releaseYear": 2016,
+      "description": "'한 턴만 더'를 부르는 문명 발전 4X 게임",
+      "image": "/images/civilization6.png",
+      "rating": 4.3,
+      "reviewCount": 3,
+      "tags": [
+        "4X",
+        "턴제",
+        "장시간플레이"
+      ]
+    },
+    {
+      "id": "17",
+      "genreId": 4,
+      "title": "StarCraft II",
+      "developer": "Blizzard",
+      "releaseYear": 2010,
+      "description": "e스포츠의 전설, 정통 RTS의 대명사",
+      "image": "/images/SC2.png",
+      "rating": 4,
+      "reviewCount": 3,
+      "tags": [
+        "RTS",
+        "e스포츠",
+        "경쟁"
+      ]
+    },
+    {
+      "id": "18",
+      "genreId": 4,
+      "title": "XCOM 2",
+      "developer": "Firaxis Games",
+      "releaseYear": 2016,
+      "description": "외계 침공에 맞서는 하드코어 턴제 전략",
+      "image": "/images/xcom2.png",
+      "rating": 4,
+      "reviewCount": 3,
+      "tags": [
+        "턴제",
+        "고난이도",
+        "SF"
+      ]
+    },
+    {
+      "id": "19",
+      "genreId": 4,
+      "title": "Age of Empires IV",
+      "developer": "Relic Entertainment",
+      "releaseYear": 2021,
+      "description": "역사 속 문명들이 격돌하는 정통 RTS의 귀환",
+      "image": "/images/AoE4.png",
+      "rating": 3.7,
+      "reviewCount": 3,
+      "tags": [
+        "RTS",
+        "역사",
+        "멀티플레이"
+      ]
+    },
+    {
+      "id": "20",
+      "genreId": 4,
+      "title": "Total War: Warhammer III",
+      "developer": "Creative Assembly",
+      "releaseYear": 2022,
+      "description": "판타지 세계의 대규모 실시간 전투 전략",
+      "image": "/images/totalwar_wh3.png",
+      "rating": 4.3,
+      "reviewCount": 3,
+      "tags": [
+        "전략",
+        "판타지",
+        "대규모전투"
+      ]
+    },
+    {
+      "id": "21",
+      "genreId": 5,
+      "title": "Hollow Knight",
+      "developer": "Team Cherry",
+      "releaseYear": 2017,
+      "description": "아름다운 2D 메트로바니아 인디의 걸작",
+      "image": "/images/HK.png",
+      "rating": 4.7,
+      "reviewCount": 3,
+      "tags": [
+        "메트로바니아",
+        "2D",
+        "감성"
+      ]
+    },
+    {
+      "id": "22",
+      "genreId": 5,
+      "title": "Stardew Valley",
+      "developer": "ConcernedApe",
+      "releaseYear": 2016,
+      "description": "힐링과 중독을 동시에 주는 농장 시뮬레이션",
+      "image": "/images/stardew_valley.png",
+      "rating": 5,
+      "reviewCount": 3,
+      "tags": [
+        "힐링",
+        "농장",
+        "픽셀아트"
+      ]
+    },
+    {
+      "id": "23",
+      "genreId": 5,
+      "title": "Meccha Chameleon",
+      "developer": "lemorion_1224",
+      "releaseYear": 2026,
+      "description": "색상 변화와 위장술, 화려한 메카닉 무장을 활용해 적들을 소탕하는 독특한 스타일의 인디 액션 게임",
+      "image": "/images/MC.png",
+      "rating": 4.7,
+      "reviewCount": 3,
+      "tags": [
+        "인디",
+        "액션",
+        "캐주얼",
+        "변신"
+      ]
+    },
+    {
+      "id": "24",
+      "genreId": 5,
+      "title": "The Binding of Isaac: Rebirth",
+      "developer": "Nicalis",
+      "releaseYear": 2014,
+      "description": "수백 가지의 독창적인 아이템 시너지와 괴기스러운 분위기가 매력적인 로그라이크 명작",
+      "image": "/images/BoI_rebirth.png",
+      "rating": 4.6,
+      "reviewCount": 5,
+      "tags": [
+        "로그라이크",
+        "인디",
+        "고난이도",
+        "아이템시너지"
+      ]
+    },
+    {
+      "id": "25",
+      "genreId": 5,
+      "title": "Undertale",
+      "developer": "Toby Fox",
+      "releaseYear": 2015,
+      "description": "선택이 만드는 이야기, 독특한 인디 RPG",
+      "image": "/images/undertale.png",
+      "rating": 4.7,
+      "reviewCount": 3,
+      "tags": [
+        "스토리",
+        "선택지",
+        "감성"
+      ]
+    },
+    {
+      "id": "26",
+      "genreId": 6,
+      "title": "The Sims 4",
+      "developer": "Maxis",
+      "releaseYear": 2014,
+      "description": "가상 인생을 자유롭게 설계하는 인생 시뮬레이션",
+      "image": "/images/the_sims4.png",
+      "rating": 4,
+      "reviewCount": 3,
+      "tags": [
+        "인생시뮬",
+        "자유도",
+        "샌드박스"
+      ]
+    },
+    {
+      "id": "27",
+      "genreId": 6,
+      "title": "Cities: Skylines",
+      "developer": "Colossal Order",
+      "releaseYear": 2015,
+      "description": "정교한 도시 건설 시뮬레이션의 대표작",
+      "image": "/images/cities_skylines.png",
+      "rating": 4.3,
+      "reviewCount": 3,
+      "tags": [
+        "건설",
+        "경영",
+        "샌드박스"
+      ]
+    },
+    {
+      "id": "28",
+      "genreId": 6,
+      "title": "Football Manager 2024",
+      "developer": "Sports Interactive",
+      "releaseYear": 2023,
+      "description": "축구 감독의 모든 것을 담은 정교한 시뮬레이션",
+      "image": "/images/fm2024.png",
+      "rating": 4.3,
+      "reviewCount": 3,
+      "tags": [
+        "스포츠",
+        "경영",
+        "장시간플레이"
+      ]
+    },
+    {
+      "id": "29",
+      "genreId": 6,
+      "title": "Microsoft Flight Simulator",
+      "developer": "Asobo Studio",
+      "releaseYear": 2020,
+      "description": "실제 지구를 그대로 옮긴 초정밀 비행 시뮬레이터",
+      "image": "/images/ms_flight_simul.png",
+      "rating": 4.3,
+      "reviewCount": 3,
+      "tags": [
+        "시뮬레이터",
+        "고사양",
+        "리얼리티"
+      ]
+    },
+    {
+      "id": "30",
+      "genreId": 6,
+      "title": "Kerbal Space Program",
+      "developer": "Squad",
+      "releaseYear": 2015,
+      "description": "귀여운 커발과 함께하는 로켓 공학 시뮬레이션",
+      "image": "/images/kerbal_space_program.png",
+      "rating": 4,
+      "reviewCount": 3,
+      "tags": [
+        "우주",
+        "물리엔진",
+        "샌드박스"
+      ]
+    },
+    {
+      "genreId": 4,
+      "title": "Age of Mythology",
+      "developer": "Ensemble Studios",
+      "releaseYear": 2002,
+      "description": "그리스·이집트·북유럽 신화 속 신들의 권능과 신수들이 격돌하는 장대한 실시간 전략(RTS) 게임",
+      "image": "/images/AgeofMythology.png",
+      "rating": 0,
+      "reviewCount": 0,
+      "tags": [
+        "전략",
+        "신화",
+        "실시간"
+      ],
+      "id": "od8j5NeqEWg"
+    },
+    {
+      "genreId": 4,
+      "title": "7 Years War2+",
+      "developer": "HQ team",
+      "releaseYear": 2000,
+      "description": "임진왜란의 역사를 배경으로 조선·명·일본 세 진영과 영웅 장수들이 격돌하는 정통 한국형 실시간 RTS",
+      "image": "/images/seven_years_war_2+.png",
+      "rating": 0,
+      "reviewCount": 0,
+      "tags": [
+        "역사",
+        "한국형",
+        "전략"
+      ],
+      "id": "sDM_N01tMt8"
+    },
+    {
+      "genreId": 4,
+      "title": "Command&Conquer: Generals - Zero Hour",
+      "developer": "EA Games",
+      "releaseYear": 2003,
+      "description": "미국·중국·GLA 세 진영과 개성 넘치는 제너럴들이 특화 전술로 맞서는 화끈한 현대전 실시간 전략",
+      "image": "/images/coc_zerohour.png",
+      "rating": 0,
+      "reviewCount": 0,
+      "tags": [
+        "현대전",
+        "실시간",
+        "전쟁"
+      ],
+      "id": "2vVapcRbmsY"
+    }
+  ],
+  "genres": [
+    {
+      "id": "1",
+      "genreName": "RPG"
+    },
+    {
+      "id": "2",
+      "genreName": "FPS"
+    },
+    {
+      "id": "3",
+      "genreName": "Action"
+    },
+    {
+      "id": "4",
+      "genreName": "Strategy"
+    },
+    {
+      "id": "5",
+      "genreName": "Indie"
+    },
+    {
+      "id": "6",
+      "genreName": "Simulation"
+    }
+  ],
+  "reviews": [
+    {
+      "id": "1",
+      "gameId": 1,
+      "author": "스토리파",
+      "rating": 5,
+      "content": "인생 최고의 게임입니다. 강력 추천!",
+      "playTime": 142,
+      "createdAt": "2025-11-12T10:20:00.000Z"
+    },
+    {
+      "id": "2",
+      "gameId": 1,
+      "author": "게이머123",
+      "rating": 5,
+      "content": "시간 가는 줄 모르고 했습니다.",
+      "playTime": 98,
+      "createdAt": "2026-02-04T15:30:00.000Z"
+    },
+    {
+      "id": "3",
+      "gameId": 1,
+      "author": "익명52",
+      "rating": 4,
+      "content": "전반적으로 훌륭하지만 약간의 아쉬운 점은 있습니다.",
+      "playTime": 45,
+      "createdAt": "2026-05-18T09:12:00.000Z"
+    },
+    {
+      "id": "4",
+      "gameId": 2,
+      "author": "다크소울팬",
+      "rating": 5,
+      "content": "완벽합니다. 말 그대로 갓겜!",
+      "playTime": 210,
+      "createdAt": "2025-08-20T14:10:00.000Z"
+    },
+    {
+      "id": "5",
+      "gameId": 2,
+      "author": "고인물99",
+      "rating": 5,
+      "content": "돈이 전혀 아깝지 않은 명작입니다.",
+      "playTime": 175,
+      "createdAt": "2026-01-10T22:45:00.000Z"
+    },
+    {
+      "id": "6",
+      "gameId": 2,
+      "author": "뉴비",
+      "rating": 3,
+      "content": "호불호가 약간 갈릴 것 같은 시스템이네요.",
+      "playTime": 24,
+      "createdAt": "2026-06-02T11:05:00.000Z"
+    },
+    {
+      "id": "7",
+      "gameId": 3,
+      "author": "자유인",
+      "rating": 5,
+      "content": "인생 최고의 게임입니다. 강력 추천!",
+      "playTime": 300,
+      "createdAt": "2025-09-01T12:00:00.000Z"
+    },
+    {
+      "id": "8",
+      "gameId": 3,
+      "author": "타임머신",
+      "rating": 5,
+      "content": "시간 가는 줄 모르고 했습니다.",
+      "playTime": 250,
+      "createdAt": "2025-12-15T18:20:00.000Z"
+    },
+    {
+      "id": "9",
+      "gameId": 3,
+      "author": "겜돌이77",
+      "rating": 4,
+      "content": "정말 재밌게 플레이했습니다. 추천합니다.",
+      "playTime": 88,
+      "createdAt": "2026-04-11T08:30:00.000Z"
+    },
+    {
+      "id": "10",
+      "gameId": 4,
+      "author": "JRPG매니아",
+      "rating": 5,
+      "content": "그래픽, BGM, 스토리 삼박자가 미쳤습니다.",
+      "playTime": 110,
+      "createdAt": "2025-10-05T19:00:00.000Z"
+    },
+    {
+      "id": "11",
+      "gameId": 4,
+      "author": "엔딩봄",
+      "rating": 4,
+      "content": "충분히 소장 가치가 있는 게임입니다.",
+      "playTime": 95,
+      "createdAt": "2026-03-22T14:15:00.000Z"
+    },
+    {
+      "id": "12",
+      "gameId": 4,
+      "author": "스트리머",
+      "rating": 4,
+      "content": "전반적으로 훌륭하지만 약간의 아쉬운 점은 있습니다.",
+      "playTime": 60,
+      "createdAt": "2026-07-01T20:50:00.000Z"
+    },
+    {
+      "id": "13",
+      "gameId": 5,
+      "author": "갓겜만함",
+      "rating": 5,
+      "content": "완벽합니다. 말 그대로 갓겜!",
+      "playTime": 160,
+      "createdAt": "2025-09-18T16:40:00.000Z"
+    },
+    {
+      "id": "14",
+      "gameId": 5,
+      "author": "100시간돌파",
+      "rating": 5,
+      "content": "인생 최고의 게임입니다. 강력 추천!",
+      "playTime": 190,
+      "createdAt": "2026-02-28T13:25:00.000Z"
+    },
+    {
+      "id": "15",
+      "gameId": 5,
+      "author": "전략왕",
+      "rating": 4,
+      "content": "취향 맞으면 이만한 게임이 없네요.",
+      "playTime": 70,
+      "createdAt": "2026-06-15T17:10:00.000Z"
+    },
+    {
+      "id": "16",
+      "gameId": 6,
+      "author": "프로게이머",
+      "rating": 5,
+      "content": "완벽합니다. 말 그대로 갓겜!",
+      "playTime": 150,
+      "createdAt": "2025-11-30T21:00:00.000Z"
+    },
+    {
+      "id": "17",
+      "gameId": 6,
+      "author": "익명",
+      "rating": 4,
+      "content": "재밌는데 팀운 심함",
+      "playTime": 80,
+      "createdAt": "2026-03-05T19:30:00.000Z"
+    },
+    {
+      "id": "18",
+      "gameId": 6,
+      "author": "주말게이머",
+      "rating": 3,
+      "content": "무난하게 할 만합니다.",
+      "playTime": 35,
+      "createdAt": "2026-05-20T10:15:00.000Z"
+    },
+    {
+      "id": "19",
+      "gameId": 7,
+      "author": "영웅슈터",
+      "rating": 4,
+      "content": "정말 재밌게 플레이했습니다. 추천합니다.",
+      "playTime": 65,
+      "createdAt": "2025-10-12T11:40:00.000Z"
+    },
+    {
+      "id": "20",
+      "gameId": 7,
+      "author": "솔직리뷰어",
+      "rating": 4,
+      "content": "최적화가 살짝 아쉽지만 연출과 재미는 최고입니다.",
+      "playTime": 50,
+      "createdAt": "2026-01-25T16:05:00.000Z"
+    },
+    {
+      "id": "21",
+      "gameId": 7,
+      "author": "방구석셰프",
+      "rating": 3,
+      "content": "쏘쏘합니다. 취향 타는 편.",
+      "playTime": 20,
+      "createdAt": "2026-04-30T23:10:00.000Z"
+    },
+    {
+      "id": "22",
+      "gameId": 8,
+      "author": "e스포츠팬",
+      "rating": 5,
+      "content": "돈이 전혀 아깝지 않은 명작입니다.",
+      "playTime": 220,
+      "createdAt": "2025-08-05T13:00:00.000Z"
+    },
+    {
+      "id": "23",
+      "gameId": 8,
+      "author": "FPS마니아",
+      "rating": 4,
+      "content": "전반적으로 훌륭하지만 약간의 아쉬운 점은 있습니다.",
+      "playTime": 110,
+      "createdAt": "2026-02-14T18:20:00.000Z"
+    },
+    {
+      "id": "24",
+      "gameId": 8,
+      "author": "타임슬립",
+      "rating": 4,
+      "content": "충분히 소장 가치가 있는 게임입니다.",
+      "playTime": 75,
+      "createdAt": "2026-06-10T12:45:00.000Z"
+    },
+    {
+      "id": "25",
+      "gameId": 9,
+      "author": "배틀로얄",
+      "rating": 5,
+      "content": "시간 가는 줄 모르고 했습니다.",
+      "playTime": 130,
+      "createdAt": "2025-12-01T09:50:00.000Z"
+    },
+    {
+      "id": "26",
+      "gameId": 9,
+      "author": "겜돌이",
+      "rating": 4,
+      "content": "취향 맞으면 이만한 게임이 없네요.",
+      "playTime": 85,
+      "createdAt": "2026-03-18T15:15:00.000Z"
+    },
+    {
+      "id": "27",
+      "gameId": 9,
+      "author": "뉴비33",
+      "rating": 3,
+      "content": "재미는 있는데 버그가 간혹 있습니다.",
+      "playTime": 18,
+      "createdAt": "2026-07-02T21:00:00.000Z"
+    },
+    {
+      "id": "28",
+      "gameId": 10,
+      "author": "밀리터리",
+      "rating": 4,
+      "content": "정말 재밌게 플레이했습니다. 추천합니다.",
+      "playTime": 55,
+      "createdAt": "2025-11-22T14:30:00.000Z"
+    },
+    {
+      "id": "29",
+      "gameId": 10,
+      "author": "캠페인파",
+      "rating": 3,
+      "content": "무난하게 할 만합니다.",
+      "playTime": 25,
+      "createdAt": "2026-02-09T10:10:00.000Z"
+    },
+    {
+      "id": "30",
+      "gameId": 10,
+      "author": "솔직리뷰어",
+      "rating": 3,
+      "content": "할인할 때 사서 즐기기에 딱 좋습니다.",
+      "playTime": 30,
+      "createdAt": "2026-05-05T17:40:00.000Z"
+    },
+    {
+      "id": "31",
+      "gameId": 11,
+      "author": "액션마니아",
+      "rating": 5,
+      "content": "인생 최고의 게임입니다. 강력 추천!",
+      "playTime": 140,
+      "createdAt": "2025-09-10T20:00:00.000Z"
+    },
+    {
+      "id": "32",
+      "gameId": 11,
+      "author": "스토리파",
+      "rating": 5,
+      "content": "완벽합니다. 말 그대로 갓겜!",
+      "playTime": 115,
+      "createdAt": "2026-01-08T11:25:00.000Z"
+    },
+    {
+      "id": "33",
+      "gameId": 11,
+      "author": "주말게이머",
+      "rating": 4,
+      "content": "전반적으로 훌륭하지만 약간의 아쉬운 점은 있습니다.",
+      "playTime": 50,
+      "createdAt": "2026-04-20T16:00:00.000Z"
+    },
+    {
+      "id": "34",
+      "gameId": 12,
+      "author": "검술왕",
+      "rating": 5,
+      "content": "시간 가는 줄 모르고 했습니다.",
+      "playTime": 180,
+      "createdAt": "2025-10-28T13:15:00.000Z"
+    },
+    {
+      "id": "35",
+      "gameId": 12,
+      "author": "고난이도성애자",
+      "rating": 4,
+      "content": "최적화가 살짝 아쉽지만 연출과 재미는 최고입니다.",
+      "playTime": 90,
+      "createdAt": "2026-02-19T22:30:00.000Z"
+    },
+    {
+      "id": "36",
+      "gameId": 12,
+      "author": "뉴비77",
+      "rating": 4,
+      "content": "취향 맞으면 이만한 게임이 없네요.",
+      "playTime": 40,
+      "createdAt": "2026-06-08T10:00:00.000Z"
+    },
+    {
+      "id": "37",
+      "gameId": 13,
+      "author": "고딕호러",
+      "rating": 5,
+      "content": "돈이 전혀 아깝지 않은 명작입니다.",
+      "playTime": 165,
+      "createdAt": "2025-08-19T18:45:00.000Z"
+    },
+    {
+      "id": "38",
+      "gameId": 13,
+      "author": "소울라이크",
+      "rating": 5,
+      "content": "완벽합니다. 말 그대로 갓겜!",
+      "playTime": 200,
+      "createdAt": "2025-12-30T09:20:00.000Z"
+    },
+    {
+      "id": "39",
+      "gameId": 13,
+      "author": "자유인",
+      "rating": 4,
+      "content": "정말 재밌게 플레이했습니다. 추천합니다.",
+      "playTime": 70,
+      "createdAt": "2026-05-14T15:10:00.000Z"
+    },
+    {
+      "id": "40",
+      "gameId": 14,
+      "author": "콤보장인",
+      "rating": 5,
+      "content": "그래픽, BGM, 스토리 삼박자가 미쳤습니다.",
+      "playTime": 105,
+      "createdAt": "2025-11-04T12:30:00.000Z"
+    },
+    {
+      "id": "41",
+      "gameId": 14,
+      "author": "스타일리시",
+      "rating": 4,
+      "content": "충분히 소장 가치가 있는 게임입니다.",
+      "playTime": 65,
+      "createdAt": "2026-03-01T21:15:00.000Z"
+    },
+    {
+      "id": "42",
+      "gameId": 14,
+      "author": "익명",
+      "rating": 4,
+      "content": "전반적으로 훌륭하지만 약간의 아쉬운 점은 있습니다.",
+      "playTime": 45,
+      "createdAt": "2026-06-25T11:40:00.000Z"
+    },
+    {
+      "id": "43",
+      "gameId": 15,
+      "author": "감성파",
+      "rating": 5,
+      "content": "인생 최고의 게임입니다. 강력 추천!",
+      "playTime": 125,
+      "createdAt": "2025-10-15T15:00:00.000Z"
+    },
+    {
+      "id": "44",
+      "gameId": 15,
+      "author": "철학가",
+      "rating": 5,
+      "content": "시간 가는 줄 모르고 했습니다.",
+      "playTime": 95,
+      "createdAt": "2026-01-20T19:20:00.000Z"
+    },
+    {
+      "id": "45",
+      "gameId": 15,
+      "author": "엔딩봄88",
+      "rating": 4,
+      "content": "정말 재밌게 플레이했습니다. 추천합니다.",
+      "playTime": 55,
+      "createdAt": "2026-04-18T08:05:00.000Z"
+    },
+    {
+      "id": "46",
+      "gameId": 16,
+      "author": "한턴만더",
+      "rating": 5,
+      "content": "시간 가는 줄 모르고 했습니다.",
+      "playTime": 280,
+      "createdAt": "2025-09-08T22:10:00.000Z"
+    },
+    {
+      "id": "47",
+      "gameId": 16,
+      "author": "문명인",
+      "rating": 4,
+      "content": "취향 맞으면 이만한 게임이 없네요.",
+      "playTime": 150,
+      "createdAt": "2026-02-12T13:40:00.000Z"
+    },
+    {
+      "id": "48",
+      "gameId": 16,
+      "author": "전략왕",
+      "rating": 4,
+      "content": "충분히 소장 가치가 있는 게임입니다.",
+      "playTime": 90,
+      "createdAt": "2026-05-30T17:25:00.000Z"
+    },
+    {
+      "id": "49",
+      "gameId": 17,
+      "author": "RTS전설",
+      "rating": 4,
+      "content": "전반적으로 훌륭하지만 약간의 아쉬운 점은 있습니다.",
+      "playTime": 140,
+      "createdAt": "2025-11-15T10:00:00.000Z"
+    },
+    {
+      "id": "50",
+      "gameId": 17,
+      "author": "게이머",
+      "rating": 4,
+      "content": "정말 재밌게 플레이했습니다. 추천합니다.",
+      "playTime": 100,
+      "createdAt": "2026-03-10T16:45:00.000Z"
+    },
+    {
+      "id": "51",
+      "gameId": 17,
+      "author": "익명10",
+      "rating": 4,
+      "content": "최적화가 살짝 아쉽지만 연출과 재미는 최고입니다.",
+      "playTime": 60,
+      "createdAt": "2026-07-08T12:00:00.000Z"
+    },
+    {
+      "id": "52",
+      "gameId": 18,
+      "author": "외계인사냥꾼",
+      "rating": 4,
+      "content": "취향 맞으면 이만한 게임이 없네요.",
+      "playTime": 85,
+      "createdAt": "2025-10-01T14:20:00.000Z"
+    },
+    {
+      "id": "53",
+      "gameId": 18,
+      "author": "턴제성애자",
+      "rating": 4,
+      "content": "충분히 소장 가치가 있는 게임입니다.",
+      "playTime": 70,
+      "createdAt": "2026-01-14T20:10:00.000Z"
+    },
+    {
+      "id": "54",
+      "gameId": 18,
+      "author": "고난이도",
+      "rating": 4,
+      "content": "전반적으로 훌륭하지만 약간의 아쉬운 점은 있습니다.",
+      "playTime": 50,
+      "createdAt": "2026-04-25T11:35:00.000Z"
+    },
+    {
+      "id": "55",
+      "gameId": 19,
+      "author": "역사학자",
+      "rating": 4,
+      "content": "정말 재밌게 플레이했습니다. 추천합니다.",
+      "playTime": 65,
+      "createdAt": "2025-12-20T15:50:00.000Z"
+    },
+    {
+      "id": "56",
+      "gameId": 19,
+      "author": "중세마니아",
+      "rating": 4,
+      "content": "최적화가 살짝 아쉽지만 연출과 재미는 최고입니다.",
+      "playTime": 40,
+      "createdAt": "2026-03-29T18:00:00.000Z"
+    },
+    {
+      "id": "57",
+      "gameId": 19,
+      "author": "뉴비55",
+      "rating": 3,
+      "content": "무난하게 할 만합니다.",
+      "playTime": 20,
+      "createdAt": "2026-06-18T09:30:00.000Z"
+    },
+    {
+      "id": "58",
+      "gameId": 20,
+      "author": "워해머",
+      "rating": 5,
+      "content": "완벽합니다. 말 그대로 갓겜!",
+      "playTime": 170,
+      "createdAt": "2025-08-30T17:15:00.000Z"
+    },
+    {
+      "id": "59",
+      "gameId": 20,
+      "author": "대규모전투",
+      "rating": 4,
+      "content": "전반적으로 훌륭하지만 약간의 아쉬운 점은 있습니다.",
+      "playTime": 95,
+      "createdAt": "2026-02-01T21:40:00.000Z"
+    },
+    {
+      "id": "60",
+      "gameId": 20,
+      "author": "판타지덕후",
+      "rating": 4,
+      "content": "충분히 소장 가치가 있는 게임입니다.",
+      "playTime": 80,
+      "createdAt": "2026-05-12T13:05:00.000Z"
+    },
+    {
+      "id": "61",
+      "gameId": 21,
+      "author": "픽셀러",
+      "rating": 5,
+      "content": "인생 최고의 게임입니다. 강력 추천!",
+      "playTime": 115,
+      "createdAt": "2025-09-25T11:00:00.000Z"
+    },
+    {
+      "id": "62",
+      "gameId": 21,
+      "author": "메트로바니아",
+      "rating": 5,
+      "content": "시간 가는 줄 모르고 했습니다.",
+      "playTime": 85,
+      "createdAt": "2026-01-05T16:30:00.000Z"
+    },
+    {
+      "id": "63",
+      "gameId": 21,
+      "author": "감성유저",
+      "rating": 4,
+      "content": "정말 재밌게 플레이했습니다. 추천합니다.",
+      "playTime": 45,
+      "createdAt": "2026-04-02T20:20:00.000Z"
+    },
+    {
+      "id": "64",
+      "gameId": 22,
+      "author": "농부",
+      "rating": 5,
+      "content": "새벽 3시까지 밭 갈고 있었어요",
+      "playTime": 200,
+      "createdAt": "2025-07-15T02:45:00.000Z"
+    },
+    {
+      "id": "65",
+      "gameId": 22,
+      "author": "힐링중",
+      "rating": 5,
+      "content": "인생 최고의 게임입니다. 강력 추천!",
+      "playTime": 180,
+      "createdAt": "2025-11-10T14:10:00.000Z"
+    },
+    {
+      "id": "66",
+      "gameId": 22,
+      "author": "귀농꿈나무",
+      "rating": 5,
+      "content": "완벽합니다. 말 그대로 갓겜!",
+      "playTime": 150,
+      "createdAt": "2026-03-14T09:00:00.000Z"
+    },
+    {
+      "id": "67",
+      "gameId": 23,
+      "author": "로그라이크",
+      "rating": 5,
+      "content": "시간 가는 줄 모르고 했습니다.",
+      "playTime": 135,
+      "createdAt": "2025-10-20T18:30:00.000Z"
+    },
+    {
+      "id": "68",
+      "gameId": 23,
+      "author": "하데스팬",
+      "rating": 5,
+      "content": "돈이 전혀 아깝지 않은 명작입니다.",
+      "playTime": 100,
+      "createdAt": "2026-02-22T21:15:00.000Z"
+    },
+    {
+      "id": "69",
+      "gameId": 23,
+      "author": "액션파",
+      "rating": 4,
+      "content": "취향 맞으면 이만한 게임이 없네요.",
+      "playTime": 50,
+      "createdAt": "2026-06-01T10:40:00.000Z"
+    },
+    {
+      "id": "70",
+      "gameId": 24,
+      "author": "플랫포머",
+      "rating": 5,
+      "content": "그래픽, BGM, 스토리 삼박자가 미쳤습니다.",
+      "playTime": 75,
+      "createdAt": "2025-08-12T15:20:00.000Z"
+    },
+    {
+      "id": "71",
+      "gameId": 24,
+      "author": "등산가",
+      "rating": 4,
+      "content": "정말 재밌게 플레이했습니다. 추천합니다.",
+      "playTime": 50,
+      "createdAt": "2025-12-05T11:10:00.000Z"
+    },
+    {
+      "id": "72",
+      "gameId": 24,
+      "author": "도전과제",
+      "rating": 4,
+      "content": "충분히 소장 가치가 있는 게임입니다.",
+      "playTime": 35,
+      "createdAt": "2026-04-16T19:05:00.000Z"
+    },
+    {
+      "id": "73",
+      "gameId": 25,
+      "author": "스토리파",
+      "rating": 5,
+      "content": "인생 최고의 게임입니다. 강력 추천!",
+      "playTime": 60,
+      "createdAt": "2025-09-03T13:40:00.000Z"
+    },
+    {
+      "id": "74",
+      "gameId": 25,
+      "author": "선택지",
+      "rating": 5,
+      "content": "완벽합니다. 말 그대로 갓겜!",
+      "playTime": 45,
+      "createdAt": "2026-01-28T17:00:00.000Z"
+    },
+    {
+      "id": "75",
+      "gameId": 25,
+      "author": "감성인디",
+      "rating": 4,
+      "content": "전반적으로 훌륭하지만 약간의 아쉬운 점은 있습니다.",
+      "playTime": 30,
+      "createdAt": "2026-05-22T22:15:00.000Z"
+    },
+    {
+      "id": "76",
+      "gameId": 26,
+      "author": "심즈덕후",
+      "rating": 4,
+      "content": "정말 재밌게 플레이했습니다. 추천합니다.",
+      "playTime": 190,
+      "createdAt": "2025-10-18T10:30:00.000Z"
+    },
+    {
+      "id": "77",
+      "gameId": 26,
+      "author": "건축가",
+      "rating": 4,
+      "content": "취향 맞으면 이만한 게임이 없네요.",
+      "playTime": 140,
+      "createdAt": "2026-02-17T14:50:00.000Z"
+    },
+    {
+      "id": "78",
+      "gameId": 26,
+      "author": "인생시뮬",
+      "rating": 4,
+      "content": "충분히 소장 가치가 있는 게임입니다.",
+      "playTime": 80,
+      "createdAt": "2026-06-12T18:25:00.000Z"
+    },
+    {
+      "id": "79",
+      "gameId": 27,
+      "author": "시장님",
+      "rating": 5,
+      "content": "시간 가는 줄 모르고 했습니다.",
+      "playTime": 210,
+      "createdAt": "2025-11-28T09:15:00.000Z"
+    },
+    {
+      "id": "80",
+      "gameId": 27,
+      "author": "건설왕",
+      "rating": 4,
+      "content": "전반적으로 훌륭하지만 약간의 아쉬운 점은 있습니다.",
+      "playTime": 110,
+      "createdAt": "2026-03-08T15:40:00.000Z"
+    },
+    {
+      "id": "81",
+      "gameId": 27,
+      "author": "교통정체",
+      "rating": 4,
+      "content": "최적화가 살짝 아쉽지만 연출과 재미는 최고입니다.",
+      "playTime": 75,
+      "createdAt": "2026-07-05T11:20:00.000Z"
+    },
+    {
+      "id": "82",
+      "gameId": 28,
+      "author": "축구감독",
+      "rating": 5,
+      "content": "돈이 전혀 아깝지 않은 명작입니다.",
+      "playTime": 260,
+      "createdAt": "2025-08-22T23:00:00.000Z"
+    },
+    {
+      "id": "83",
+      "gameId": 28,
+      "author": "폐인생성기",
+      "rating": 4,
+      "content": "정말 재밌게 플레이했습니다. 추천합니다.",
+      "playTime": 175,
+      "createdAt": "2026-01-02T12:35:00.000Z"
+    },
+    {
+      "id": "84",
+      "gameId": 28,
+      "author": "유망주수집",
+      "rating": 4,
+      "content": "취향 맞으면 이만한 게임이 없네요.",
+      "playTime": 110,
+      "createdAt": "2026-04-14T16:50:00.000Z"
+    },
+    {
+      "id": "85",
+      "gameId": 29,
+      "author": "조종사",
+      "rating": 5,
+      "content": "그래픽, BGM, 스토리 삼박자가 미쳤습니다.",
+      "playTime": 90,
+      "createdAt": "2025-09-14T14:10:00.000Z"
+    },
+    {
+      "id": "86",
+      "gameId": 29,
+      "author": "비행마니아",
+      "rating": 4,
+      "content": "최적화가 살짝 아쉽지만 연출과 재미는 최고입니다.",
+      "playTime": 65,
+      "createdAt": "2026-02-25T19:45:00.000Z"
+    },
+    {
+      "id": "87",
+      "gameId": 29,
+      "author": "고사양컴",
+      "rating": 4,
+      "content": "충분히 소장 가치가 있는 게임입니다.",
+      "playTime": 40,
+      "createdAt": "2026-06-20T10:00:00.000Z"
+    },
+    {
+      "id": "88",
+      "gameId": 30,
+      "author": "우주비행사",
+      "rating": 5,
+      "content": "시간 가는 줄 모르고 했습니다.",
+      "playTime": 140,
+      "createdAt": "2025-10-10T11:50:00.000Z"
+    },
+    {
+      "id": "89",
+      "gameId": 30,
+      "author": "물리학자",
+      "rating": 4,
+      "content": "전반적으로 훌륭하지만 약간의 아쉬운 점은 있습니다.",
+      "playTime": 85,
+      "createdAt": "2026-03-03T16:15:00.000Z"
+    },
+    {
+      "id": "90",
+      "gameId": 30,
+      "author": "커발팬",
+      "rating": 3,
+      "content": "호불호가 약간 갈릴 것 같은 시스템이네요.",
+      "playTime": 30,
+      "createdAt": "2026-06-29T21:30:00.000Z"
+    },
+    {
+      "gameId": 1,
+      "author": "이용자1",
+      "rating": 5,
+      "content": "갓겜",
+      "playTime": 120,
+      "createdAt": "2026-07-22T06:11:16.324Z",
+      "id": "HNckn3CkrSE"
+    },
+    {
+      "gameId": 2,
+      "author": "테스트",
+      "rating": 5,
+      "content": "테스트",
+      "playTime": 11212,
+      "createdAt": "2026-07-22T06:12:26.682Z",
+      "id": "BlWosfSAlKA"
+    },
+    {
+      "gameId": 3,
+      "author": "테스트",
+      "rating": 5,
+      "content": "ㄴㅌㅇㄴㅇㄹ",
+      "playTime": 1,
+      "createdAt": "2026-07-22T06:13:30.095Z",
+      "id": "O2_TD1hhfCA"
+    },
+    {
+      "gameId": 11,
+      "author": "ㅇㅇ",
+      "rating": 1,
+      "content": "ㅗㅗ",
+      "playTime": 1,
+      "createdAt": "2026-07-22T06:15:19.677Z",
+      "id": "Zi2UzW3zMn4"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

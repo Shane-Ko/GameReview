@@ -1,460 +1,539 @@
 {
-    "spots": [
+    "games": [
         {
             "id": 1,
-            "continentId": 1,
-            "country": "일본",
-            "description": "전통과 현대가 공존하는 감성 여행지",
+            "genreId": 1,
+            "title": "The Witcher 3: Wild Hunt",
+            "developer": "CD Projekt Red",
+            "releaseYear": 2015,
+            "description": "광활한 오픈월드에서 펼쳐지는 다크 판타지 RPG",
             "image": "",
             "rating": 0,
             "reviewCount": 0,
             "tags": [
-                "감성",
-                "미식",
-                "온천"
+                "오픈월드",
+                "스토리",
+                "싱글플레이"
             ]
         },
         {
             "id": 2,
-            "continentId": 1,
-            "country": "태국",
-            "description": "열대의 낭만과 화려한 사원의 나라",
+            "genreId": 1,
+            "title": "Elden Ring",
+            "developer": "FromSoftware",
+            "releaseYear": 2022,
+            "description": "소울라이크 장르의 정점, 광활한 오픈월드 다크 판타지",
             "image": "",
             "rating": 0,
             "reviewCount": 0,
             "tags": [
-                "휴양",
-                "미식",
-                "야시장"
+                "소울라이크",
+                "오픈월드",
+                "고난이도"
             ]
         },
         {
             "id": 3,
-            "continentId": 1,
-            "country": "베트남",
-            "description": "저렴한 물가와 풍부한 자연이 매력",
+            "genreId": 1,
+            "title": "The Elder Scrolls V: Skyrim",
+            "developer": "Bethesda",
+            "releaseYear": 2011,
+            "description": "자유도 높은 판타지 오픈월드의 대명사",
             "image": "",
             "rating": 0,
             "reviewCount": 0,
             "tags": [
-                "가성비",
-                "미식",
-                "자연"
+                "오픈월드",
+                "자유도",
+                "모드지원"
             ]
         },
         {
             "id": 4,
-            "continentId": 1,
-            "country": "필리핀",
-            "description": "에메랄드빛 바다와 산호섬의 천국",
+            "genreId": 1,
+            "title": "Persona 5 Royal",
+            "developer": "Atlus",
+            "releaseYear": 2019,
+            "description": "스타일리시한 도쿄 배경 학원 판타지 JRPG",
             "image": "",
             "rating": 0,
             "reviewCount": 0,
             "tags": [
-                "휴양",
-                "다이빙",
-                "가족여행"
+                "JRPG",
+                "턴제",
+                "스토리"
             ]
         },
         {
             "id": 5,
-            "continentId": 1,
-            "country": "대만",
-            "description": "야시장과 노스탤지어가 가득한 골목 여행",
+            "genreId": 1,
+            "title": "Baldur's Gate 3",
+            "developer": "Larian Studios",
+            "releaseYear": 2023,
+            "description": "D&D 룰 기반의 깊이 있는 CRPG 걸작",
             "image": "",
             "rating": 0,
             "reviewCount": 0,
             "tags": [
-                "미식",
-                "야시장",
-                "감성"
+                "CRPG",
+                "턴제",
+                "협동"
             ]
         },
         {
             "id": 6,
-            "continentId": 2,
-            "country": "이집트",
-            "description": "피라미드와 나일강, 문명의 발상지",
+            "genreId": 2,
+            "title": "Valorant",
+            "developer": "Riot Games",
+            "releaseYear": 2020,
+            "description": "전술적 5:5 캐릭터 기반 택티컬 슈터",
             "image": "",
             "rating": 0,
             "reviewCount": 0,
             "tags": [
-                "역사",
-                "유적",
-                "사막"
+                "경쟁",
+                "택티컬",
+                "무료"
             ]
         },
         {
             "id": 7,
-            "continentId": 2,
-            "country": "모로코",
-            "description": "블루시티와 사하라의 이국적 풍경",
+            "genreId": 2,
+            "title": "Overwatch 2",
+            "developer": "Blizzard",
+            "releaseYear": 2022,
+            "description": "화려한 영웅들이 펼치는 팀 기반 슈팅",
             "image": "",
             "rating": 0,
             "reviewCount": 0,
             "tags": [
-                "감성",
-                "사막",
-                "쇼핑"
+                "팀플레이",
+                "영웅슈터",
+                "무료"
             ]
         },
         {
             "id": 8,
-            "continentId": 2,
-            "country": "케냐",
-            "description": "사파리와 야생동물의 대자연",
+            "genreId": 2,
+            "title": "Counter-Strike 2",
+            "developer": "Valve",
+            "releaseYear": 2023,
+            "description": "e스포츠의 클래식, 정통 택티컬 FPS",
             "image": "",
             "rating": 0,
             "reviewCount": 0,
             "tags": [
-                "사파리",
-                "자연",
-                "액티비티"
+                "e스포츠",
+                "경쟁",
+                "택티컬"
             ]
         },
         {
             "id": 9,
-            "continentId": 2,
-            "country": "남아프리카공화국",
-            "description": "희망봉과 와인 산지의 다채로운 매력",
+            "genreId": 2,
+            "title": "Apex Legends",
+            "developer": "Respawn",
+            "releaseYear": 2019,
+            "description": "빠른 무빙과 팀플레이의 배틀로얄",
             "image": "",
             "rating": 0,
             "reviewCount": 0,
             "tags": [
-                "자연",
-                "와인",
-                "사파리"
+                "배틀로얄",
+                "팀플레이",
+                "무료"
             ]
         },
         {
             "id": 10,
-            "continentId": 2,
-            "country": "탄자니아",
-            "description": "킬리만자로와 잔지바르의 원시적 아름다움",
+            "genreId": 2,
+            "title": "Call of Duty: Modern Warfare III",
+            "developer": "Sledgehammer Games",
+            "releaseYear": 2023,
+            "description": "긴장감 넘치는 밀리터리 FPS의 최신작",
             "image": "",
             "rating": 0,
             "reviewCount": 0,
             "tags": [
-                "트레킹",
-                "휴양",
-                "자연"
+                "밀리터리",
+                "멀티플레이",
+                "캠페인"
             ]
         },
         {
             "id": 11,
-            "continentId": 3,
-            "country": "프랑스",
-            "description": "예술과 미식, 낭만의 대명사",
+            "genreId": 3,
+            "title": "God of War Ragnarok",
+            "developer": "Santa Monica Studio",
+            "releaseYear": 2022,
+            "description": "북유럽 신화를 배경으로 한 부자의 서사시",
             "image": "",
             "rating": 0,
             "reviewCount": 0,
             "tags": [
-                "미식",
-                "예술",
-                "쇼핑"
+                "스토리",
+                "액션",
+                "싱글플레이"
             ]
         },
         {
             "id": 12,
-            "continentId": 3,
-            "country": "이탈리아",
-            "description": "고대 로마부터 파스타까지, 감성의 나라",
+            "genreId": 3,
+            "title": "Sekiro: Shadows Die Twice",
+            "developer": "FromSoftware",
+            "releaseYear": 2019,
+            "description": "일본 전국시대 배경의 검술 액션 걸작",
             "image": "",
             "rating": 0,
             "reviewCount": 0,
             "tags": [
-                "미식",
-                "역사",
-                "감성"
+                "소울라이크",
+                "고난이도",
+                "싱글플레이"
             ]
         },
         {
             "id": 13,
-            "continentId": 3,
-            "country": "스페인",
-            "description": "정열의 플라멩코와 가우디의 도시",
+            "genreId": 3,
+            "title": "Bloodborne",
+            "developer": "FromSoftware",
+            "releaseYear": 2015,
+            "description": "고딕 호러 분위기의 소울라이크 명작",
             "image": "",
             "rating": 0,
             "reviewCount": 0,
             "tags": [
-                "미식",
-                "축제",
-                "건축"
+                "소울라이크",
+                "다크판타지",
+                "고난이도"
             ]
         },
         {
             "id": 14,
-            "continentId": 3,
-            "country": "스위스",
-            "description": "알프스와 호수의 그림 같은 풍경",
+            "genreId": 3,
+            "title": "Devil May Cry 5",
+            "developer": "Capcom",
+            "releaseYear": 2019,
+            "description": "스타일리시 액션의 정점을 찍은 데빌헌터 액션",
             "image": "",
             "rating": 0,
             "reviewCount": 0,
             "tags": [
-                "자연",
-                "트레킹",
-                "신혼여행"
+                "콤보",
+                "스타일리시",
+                "핵앤슬래시"
             ]
         },
         {
             "id": 15,
-            "continentId": 3,
-            "country": "그리스",
-            "description": "산토리니의 푸른 바다와 신화의 땅",
+            "genreId": 3,
+            "title": "NieR: Automata",
+            "developer": "PlatinumGames",
+            "releaseYear": 2017,
+            "description": "철학적 스토리와 화려한 액션의 조화",
             "image": "",
             "rating": 0,
             "reviewCount": 0,
             "tags": [
-                "감성",
-                "휴양",
-                "신혼여행"
+                "스토리",
+                "액션RPG",
+                "감성"
             ]
         },
         {
             "id": 16,
-            "continentId": 4,
-            "country": "브라질",
-            "description": "삼바와 아마존, 축제의 나라",
+            "genreId": 4,
+            "title": "Civilization VI",
+            "developer": "Firaxis Games",
+            "releaseYear": 2016,
+            "description": "'한 턴만 더'를 부르는 문명 발전 4X 게임",
             "image": "",
             "rating": 0,
             "reviewCount": 0,
             "tags": [
-                "축제",
-                "자연",
-                "액티비티"
+                "4X",
+                "턴제",
+                "장시간플레이"
             ]
         },
         {
             "id": 17,
-            "continentId": 4,
-            "country": "페루",
-            "description": "마추픽추와 잉카 문명의 신비",
+            "genreId": 4,
+            "title": "StarCraft II",
+            "developer": "Blizzard",
+            "releaseYear": 2010,
+            "description": "e스포츠의 전설, 정통 RTS의 대명사",
             "image": "",
             "rating": 0,
             "reviewCount": 0,
             "tags": [
-                "유적",
-                "트레킹",
-                "역사"
+                "RTS",
+                "e스포츠",
+                "경쟁"
             ]
         },
         {
             "id": 18,
-            "continentId": 4,
-            "country": "아르헨티나",
-            "description": "탱고의 열정과 파타고니아의 대자연",
+            "genreId": 4,
+            "title": "XCOM 2",
+            "developer": "Firaxis Games",
+            "releaseYear": 2016,
+            "description": "외계 침공에 맞서는 하드코어 턴제 전략",
             "image": "",
             "rating": 0,
             "reviewCount": 0,
             "tags": [
-                "자연",
-                "미식",
-                "축제"
+                "턴제",
+                "고난이도",
+                "SF"
             ]
         },
         {
             "id": 19,
-            "continentId": 4,
-            "country": "칠레",
-            "description": "이스터섬과 파타고니아의 이색 풍경",
+            "genreId": 4,
+            "title": "Age of Empires IV",
+            "developer": "Relic Entertainment",
+            "releaseYear": 2021,
+            "description": "역사 속 문명들이 격돌하는 정통 RTS의 귀환",
             "image": "",
             "rating": 0,
             "reviewCount": 0,
             "tags": [
-                "자연",
-                "와인",
-                "트레킹"
+                "RTS",
+                "역사",
+                "멀티플레이"
             ]
         },
         {
             "id": 20,
-            "continentId": 4,
-            "country": "볼리비아",
-            "description": "우유니 소금사막의 환상적인 하늘 거울",
+            "genreId": 4,
+            "title": "Total War: Warhammer III",
+            "developer": "Creative Assembly",
+            "releaseYear": 2022,
+            "description": "판타지 세계의 대규모 실시간 전투 전략",
             "image": "",
             "rating": 0,
             "reviewCount": 0,
             "tags": [
-                "감성",
-                "자연",
-                "사진"
+                "전략",
+                "판타지",
+                "대규모전투"
             ]
         },
         {
             "id": 21,
-            "continentId": 5,
-            "country": "미국",
-            "description": "동부 도시부터 서부 자연까지 무한한 스펙트럼",
+            "genreId": 5,
+            "title": "Hollow Knight",
+            "developer": "Team Cherry",
+            "releaseYear": 2017,
+            "description": "아름다운 2D 메트로바니아 인디의 걸작",
             "image": "",
             "rating": 0,
             "reviewCount": 0,
             "tags": [
-                "쇼핑",
-                "자연",
-                "테마파크"
+                "메트로바니아",
+                "2D",
+                "감성"
             ]
         },
         {
             "id": 22,
-            "continentId": 5,
-            "country": "캐나다",
-            "description": "로키산맥과 오로라의 광활한 대자연",
+            "genreId": 5,
+            "title": "Stardew Valley",
+            "developer": "ConcernedApe",
+            "releaseYear": 2016,
+            "description": "힐링과 중독을 동시에 주는 농장 시뮬레이션",
             "image": "",
             "rating": 0,
             "reviewCount": 0,
             "tags": [
-                "자연",
-                "오로라",
-                "트레킹"
+                "힐링",
+                "농장",
+                "픽셀아트"
             ]
         },
         {
             "id": 23,
-            "continentId": 5,
-            "country": "멕시코",
-            "description": "칸쿤의 휴양과 마야 문명의 흔적",
+            "genreId": 5,
+            "title": "Hades",
+            "developer": "Supergiant Games",
+            "releaseYear": 2020,
+            "description": "그리스 신화 배경의 로그라이크 액션 걸작",
             "image": "",
             "rating": 0,
             "reviewCount": 0,
             "tags": [
-                "휴양",
-                "유적",
-                "미식"
+                "로그라이크",
+                "액션",
+                "스토리"
             ]
         },
         {
             "id": 24,
-            "continentId": 5,
-            "country": "쿠바",
-            "description": "올드카와 재즈, 시간이 멈춘 도시",
+            "genreId": 5,
+            "title": "Celeste",
+            "developer": "Maddy Makes Games",
+            "releaseYear": 2018,
+            "description": "정교한 플랫포머와 따뜻한 스토리의 조화",
             "image": "",
             "rating": 0,
             "reviewCount": 0,
             "tags": [
+                "플랫포머",
                 "감성",
-                "레트로",
-                "음악"
+                "고난이도"
             ]
         },
         {
             "id": 25,
-            "continentId": 5,
-            "country": "코스타리카",
-            "description": "열대우림과 화산이 있는 에코 투어의 성지",
+            "genreId": 5,
+            "title": "Undertale",
+            "developer": "Toby Fox",
+            "releaseYear": 2015,
+            "description": "선택이 만드는 이야기, 독특한 인디 RPG",
             "image": "",
             "rating": 0,
             "reviewCount": 0,
             "tags": [
-                "자연",
-                "액티비티",
-                "에코투어"
+                "스토리",
+                "선택지",
+                "감성"
             ]
         },
         {
             "id": 26,
-            "continentId": 6,
-            "country": "호주",
-            "description": "오페라하우스부터 대산호초까지, 대륙의 다양성",
+            "genreId": 6,
+            "title": "The Sims 4",
+            "developer": "Maxis",
+            "releaseYear": 2014,
+            "description": "가상 인생을 자유롭게 설계하는 인생 시뮬레이션",
             "image": "",
             "rating": 0,
             "reviewCount": 0,
             "tags": [
-                "서핑",
-                "자연",
-                "가족여행"
+                "인생시뮬",
+                "자유도",
+                "샌드박스"
             ]
         },
         {
             "id": 27,
-            "continentId": 6,
-            "country": "뉴질랜드",
-            "description": "반지의 제왕 촬영지, 피오르드의 나라",
+            "genreId": 6,
+            "title": "Cities: Skylines",
+            "developer": "Colossal Order",
+            "releaseYear": 2015,
+            "description": "정교한 도시 건설 시뮬레이션의 대표작",
             "image": "",
             "rating": 0,
             "reviewCount": 0,
             "tags": [
-                "자연",
-                "트레킹",
-                "액티비티"
+                "건설",
+                "경영",
+                "샌드박스"
             ]
         },
         {
             "id": 28,
-            "continentId": 6,
-            "country": "피지",
-            "description": "산호초와 코코넛 나무의 남태평양 낙원",
+            "genreId": 6,
+            "title": "Football Manager 2024",
+            "developer": "Sports Interactive",
+            "releaseYear": 2023,
+            "description": "축구 감독의 모든 것을 담은 정교한 시뮬레이션",
             "image": "",
             "rating": 0,
             "reviewCount": 0,
             "tags": [
-                "휴양",
-                "다이빙",
-                "신혼여행"
+                "스포츠",
+                "경영",
+                "장시간플레이"
             ]
         },
         {
             "id": 29,
-            "continentId": 6,
-            "country": "괌",
-            "description": "가까운 미국령 휴양지, 면세 쇼핑의 매력",
+            "genreId": 6,
+            "title": "Microsoft Flight Simulator",
+            "developer": "Asobo Studio",
+            "releaseYear": 2020,
+            "description": "실제 지구를 그대로 옮긴 초정밀 비행 시뮬레이터",
             "image": "",
             "rating": 0,
             "reviewCount": 0,
             "tags": [
-                "휴양",
-                "면세쇼핑",
-                "가족여행"
+                "시뮬레이터",
+                "고사양",
+                "리얼리티"
             ]
         },
         {
             "id": 30,
-            "continentId": 6,
-            "country": "사이판",
-            "description": "수정처럼 맑은 바다의 조용한 휴양지",
+            "genreId": 6,
+            "title": "Kerbal Space Program",
+            "developer": "Squad",
+            "releaseYear": 2015,
+            "description": "귀여운 커발과 함께하는 로켓 공학 시뮬레이션",
             "image": "",
             "rating": 0,
             "reviewCount": 0,
             "tags": [
-                "휴양",
-                "다이빙",
-                "신혼여행"
+                "우주",
+                "물리엔진",
+                "샌드박스"
             ]
         }
     ],
-    "continents": [
+    "genres": [
         {
             "id": 1,
-            "continentName": "Asia"
+            "genreName": "RPG"
         },
         {
             "id": 2,
-            "continentName": "Africa"
+            "genreName": "FPS"
         },
         {
             "id": 3,
-            "continentName": "Europe"
+            "genreName": "Action"
         },
         {
             "id": 4,
-            "continentName": "South America"
+            "genreName": "Strategy"
         },
         {
             "id": 5,
-            "continentName": "North America"
+            "genreName": "Indie"
         },
         {
             "id": 6,
-            "continentName": "Oceania"
+            "genreName": "Simulation"
         }
     ],
     "reviews": [
         {
             "id": 1,
-            "spotId": 1,
-            "author": "",
+            "gameId": 2,
+            "author": "다크소울팬",
             "rating": 5,
-            "content": "",
-            "createdAt": ""
+            "content": "인생 게임. 시간 순삭 주의",
+            "playTime": 120,
+            "createdAt": "2026-07-10T14:30:00.000Z"
+        },
+        {
+            "id": 2,
+            "gameId": 22,
+            "author": "농부",
+            "rating": 5,
+            "content": "새벽 3시까지 밭 갈고 있었어요",
+            "playTime": 200,
+            "createdAt": "2026-07-15T02:45:00.000Z"
+        },
+        {
+            "id": 3,
+            "gameId": 6,
+            "author": "익명",
+            "rating": 4,
+            "content": "재밌는데 팀운 심함",
+            "playTime": 80,
+            "createdAt": "2026-07-18T20:10:00.000Z"
         }
     ]
 }

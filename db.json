@@ -1,7 +1,7 @@
 {
   "games": [
     {
-      "id": "1",
+      "id": 1,
       "genreId": 1,
       "title": "The Witcher 3: Wild Hunt",
       "developer": "CD Projekt Red",
@@ -14,10 +14,18 @@
         "오픈월드",
         "스토리",
         "싱글플레이"
+      ],
+      "isLiked": false,
+      "likeCount": 0,
+      "isSaved": false,
+      "modalImages": [
+        "/images/witcher.png",
+        "/images/witcher.png",
+        "/images/witcher.png"
       ]
     },
     {
-      "id": "2",
+      "id": 2,
       "genreId": 1,
       "title": "Elden Ring",
       "developer": "FromSoftware",
@@ -30,10 +38,18 @@
         "소울라이크",
         "오픈월드",
         "고난이도"
+      ],
+      "likeCount": 0,
+      "isLiked": false,
+      "isSaved": false,
+      "modalImages": [
+        "/images/elden_ring.png",
+        "/images/elden_ring.png",
+        "/images/elden_ring.png"
       ]
     },
     {
-      "id": "3",
+      "id": 3,
       "genreId": 1,
       "title": "The Elder Scrolls V: Skyrim",
       "developer": "Bethesda",
@@ -46,10 +62,18 @@
         "오픈월드",
         "자유도",
         "모드지원"
+      ],
+      "isLiked": false,
+      "likeCount": 0,
+      "isSaved": false,
+      "modalImages": [
+        "/images/the_elder_scrolls_5.png",
+        "/images/the_elder_scrolls_5.png",
+        "/images/the_elder_scrolls_5.png"
       ]
     },
     {
-      "id": "4",
+      "id": 4,
       "genreId": 1,
       "title": "Red Dead Redemption 2",
       "developer": "Rockstar Games",
@@ -63,10 +87,18 @@
         "스토리",
         "서부",
         "액션"
+      ],
+      "isLiked": false,
+      "likeCount": 0,
+      "isSaved": false,
+      "modalImages": [
+        "/images/rdr2.png",
+        "/images/rdr2.png",
+        "/images/rdr2.png"
       ]
     },
     {
-      "id": "5",
+      "id": 5,
       "genreId": 1,
       "title": "Cyberpunk 2077",
       "developer": "CD Projekt Red",
@@ -80,10 +112,18 @@
         "SF",
         "액션RPG",
         "스토리"
+      ],
+      "isLiked": false,
+      "likeCount": 0,
+      "isSaved": false,
+      "modalImages": [
+        "/images/cyberpunk.png",
+        "/images/cyberpunk.png",
+        "/images/cyberpunk.png"
       ]
     },
     {
-      "id": "6",
+      "id": 6,
       "genreId": 2,
       "title": "Valorant",
       "developer": "Riot Games",
@@ -96,10 +136,18 @@
         "경쟁",
         "택티컬",
         "무료"
+      ],
+      "isLiked": false,
+      "likeCount": 0,
+      "isSaved": false,
+      "modalImages": [
+        "/images/valorant.png",
+        "/images/valorant.png",
+        "/images/valorant.png"
       ]
     },
     {
-      "id": "7",
+      "id": 7,
       "genreId": 2,
       "title": "Tom Clancy's Rainbow Six Siege",
       "developer": "Ubisoft",
@@ -112,10 +160,18 @@
         "택티컬",
         "팀플레이",
         "전략"
+      ],
+      "likeCount": 0,
+      "isLiked": false,
+      "isSaved": false,
+      "modalImages": [
+        "/images/rainbow_six_siege.png",
+        "/images/rainbow_six_siege.png",
+        "/images/rainbow_six_siege.png"
       ]
     },
     {
-      "id": "8",
+      "id": 8,
       "genreId": 2,
       "title": "Counter-Strike 2",
       "developer": "Valve",
@@ -128,10 +184,18 @@
         "e스포츠",
         "경쟁",
         "택티컬"
+      ],
+      "likeCount": 0,
+      "isLiked": false,
+      "isSaved": false,
+      "modalImages": [
+        "/images/counter_strike_2.png",
+        "/images/counter_strike_2.png",
+        "/images/counter_strike_2.png"
       ]
     },
     {
-      "id": "9",
+      "id": 9,
       "genreId": 2,
       "title": "Apex Legends",
       "developer": "Respawn",
@@ -144,26 +208,42 @@
         "배틀로얄",
         "팀플레이",
         "무료"
+      ],
+      "likeCount": 0,
+      "isLiked": false,
+      "isSaved": false,
+      "modalImages": [
+        "/images/apex_legends.png",
+        "/images/apex_legends.png",
+        "/images/apex_legends.png"
       ]
     },
     {
-      "id": "10",
+      "id": 10,
       "genreId": 2,
       "title": "Call of Duty: Modern Warfare III",
       "developer": "Sledgehammer Games",
       "releaseYear": 2023,
       "description": "긴장감 넘치는 밀리터리 FPS의 최신작",
       "image": "/images/COD_MW3.png",
-      "rating": 3.3,
-      "reviewCount": 3,
+      "rating": 3.8,
+      "reviewCount": 4,
       "tags": [
         "밀리터리",
         "멀티플레이",
         "캠페인"
+      ],
+      "likeCount": 0,
+      "isLiked": true,
+      "isSaved": false,
+      "modalImages": [
+        "/images/COD_MW3.png",
+        "/images/COD_MW3.png",
+        "/images/COD_MW3.png"
       ]
     },
     {
-      "id": "11",
+      "id": 11,
       "genreId": 3,
       "title": "God of War Ragnarok",
       "developer": "Santa Monica Studio",
@@ -176,10 +256,18 @@
         "스토리",
         "액션",
         "싱글플레이"
+      ],
+      "likeCount": 0,
+      "isLiked": false,
+      "isSaved": false,
+      "modalImages": [
+        "/images/GoW_RGK.png",
+        "/images/GoW_RGK.png",
+        "/images/GoW_RGK.png"
       ]
     },
     {
-      "id": "12",
+      "id": 12,
       "genreId": 3,
       "title": "Sekiro: Shadows Die Twice",
       "developer": "FromSoftware",
@@ -192,10 +280,18 @@
         "소울라이크",
         "고난이도",
         "싱글플레이"
+      ],
+      "likeCount": 0,
+      "isLiked": false,
+      "isSaved": false,
+      "modalImages": [
+        "/images/sekiro.png",
+        "/images/sekiro.png",
+        "/images/sekiro.png"
       ]
     },
     {
-      "id": "13",
+      "id": 13,
       "genreId": 3,
       "title": "Bloodborne",
       "developer": "FromSoftware",
@@ -208,10 +304,18 @@
         "소울라이크",
         "다크판타지",
         "고난이도"
+      ],
+      "likeCount": 0,
+      "isLiked": true,
+      "isSaved": false,
+      "modalImages": [
+        "/images/bloodborne.png",
+        "/images/bloodborne.png",
+        "/images/bloodborne.png"
       ]
     },
     {
-      "id": "14",
+      "id": 14,
       "genreId": 3,
       "title": "Devil May Cry 5",
       "developer": "Capcom",
@@ -224,10 +328,18 @@
         "콤보",
         "스타일리시",
         "핵앤슬래시"
+      ],
+      "likeCount": 0,
+      "isLiked": false,
+      "isSaved": false,
+      "modalImages": [
+        "/images/DMC5.png",
+        "/images/DMC5.png",
+        "/images/DMC5.png"
       ]
     },
     {
-      "id": "15",
+      "id": 15,
       "genreId": 3,
       "title": "NieR: Automata",
       "developer": "PlatinumGames",
@@ -240,10 +352,18 @@
         "스토리",
         "액션RPG",
         "감성"
+      ],
+      "likeCount": 0,
+      "isLiked": false,
+      "isSaved": false,
+      "modalImages": [
+        "/images/nier_automata.png",
+        "/images/nier_automata.png",
+        "/images/nier_automata.png"
       ]
     },
     {
-      "id": "16",
+      "id": 16,
       "genreId": 4,
       "title": "Civilization VI",
       "developer": "Firaxis Games",
@@ -256,10 +376,18 @@
         "4X",
         "턴제",
         "장시간플레이"
+      ],
+      "likeCount": 0,
+      "isLiked": false,
+      "isSaved": false,
+      "modalImages": [
+        "/images/civilization6.png",
+        "/images/civilization6.png",
+        "/images/civilization6.png"
       ]
     },
     {
-      "id": "17",
+      "id": 17,
       "genreId": 4,
       "title": "StarCraft II",
       "developer": "Blizzard",
@@ -272,10 +400,18 @@
         "RTS",
         "e스포츠",
         "경쟁"
+      ],
+      "likeCount": 0,
+      "isLiked": false,
+      "isSaved": false,
+      "modalImages": [
+        "/images/SC2.png",
+        "/images/SC2.png",
+        "/images/SC2.png"
       ]
     },
     {
-      "id": "18",
+      "id": 18,
       "genreId": 4,
       "title": "XCOM 2",
       "developer": "Firaxis Games",
@@ -288,10 +424,18 @@
         "턴제",
         "고난이도",
         "SF"
+      ],
+      "likeCount": 0,
+      "isLiked": false,
+      "isSaved": false,
+      "modalImages": [
+        "/images/xcom2.png",
+        "/images/xcom2.png",
+        "/images/xcom2.png"
       ]
     },
     {
-      "id": "19",
+      "id": 19,
       "genreId": 4,
       "title": "Age of Empires IV",
       "developer": "Relic Entertainment",
@@ -304,10 +448,18 @@
         "RTS",
         "역사",
         "멀티플레이"
+      ],
+      "likeCount": 0,
+      "isLiked": false,
+      "isSaved": false,
+      "modalImages": [
+        "/images/AoE4.png",
+        "/images/AoE4.png",
+        "/images/AoE4.png"
       ]
     },
     {
-      "id": "20",
+      "id": 20,
       "genreId": 4,
       "title": "Total War: Warhammer III",
       "developer": "Creative Assembly",
@@ -320,10 +472,18 @@
         "전략",
         "판타지",
         "대규모전투"
+      ],
+      "likeCount": 0,
+      "isLiked": false,
+      "isSaved": false,
+      "modalImages": [
+        "/images/totalwar_wh3.png",
+        "/images/totalwar_wh3.png",
+        "/images/totalwar_wh3.png"
       ]
     },
     {
-      "id": "21",
+      "id": 21,
       "genreId": 5,
       "title": "Hollow Knight",
       "developer": "Team Cherry",
@@ -336,10 +496,18 @@
         "메트로바니아",
         "2D",
         "감성"
+      ],
+      "likeCount": 0,
+      "isLiked": false,
+      "isSaved": false,
+      "modalImages": [
+        "/images/HK.png",
+        "/images/HK.png",
+        "/images/HK.png"
       ]
     },
     {
-      "id": "22",
+      "id": 22,
       "genreId": 5,
       "title": "Stardew Valley",
       "developer": "ConcernedApe",
@@ -352,10 +520,18 @@
         "힐링",
         "농장",
         "픽셀아트"
+      ],
+      "isLiked": false,
+      "likeCount": 0,
+      "isSaved": false,
+      "modalImages": [
+        "/images/stardew_valley.png",
+        "/images/stardew_valley.png",
+        "/images/stardew_valley.png"
       ]
     },
     {
-      "id": "23",
+      "id": 23,
       "genreId": 5,
       "title": "Meccha Chameleon",
       "developer": "lemorion_1224",
@@ -369,10 +545,18 @@
         "액션",
         "캐주얼",
         "변신"
+      ],
+      "likeCount": 0,
+      "isLiked": false,
+      "isSaved": false,
+      "modalImages": [
+        "/images/MC.png",
+        "/images/MC.png",
+        "/images/MC.png"
       ]
     },
     {
-      "id": "24",
+      "id": 24,
       "genreId": 5,
       "title": "The Binding of Isaac: Rebirth",
       "developer": "Nicalis",
@@ -386,10 +570,18 @@
         "인디",
         "고난이도",
         "아이템시너지"
+      ],
+      "likeCount": 0,
+      "isLiked": false,
+      "isSaved": false,
+      "modalImages": [
+        "/images/BoI_rebirth.png",
+        "/images/BoI_rebirth.png",
+        "/images/BoI_rebirth.png"
       ]
     },
     {
-      "id": "25",
+      "id": 25,
       "genreId": 5,
       "title": "Undertale",
       "developer": "Toby Fox",
@@ -402,10 +594,18 @@
         "스토리",
         "선택지",
         "감성"
+      ],
+      "likeCount": 0,
+      "isLiked": true,
+      "isSaved": false,
+      "modalImages": [
+        "/images/undertale.png",
+        "/images/undertale.png",
+        "/images/undertale.png"
       ]
     },
     {
-      "id": "26",
+      "id": 26,
       "genreId": 6,
       "title": "The Sims 4",
       "developer": "Maxis",
@@ -418,10 +618,18 @@
         "인생시뮬",
         "자유도",
         "샌드박스"
+      ],
+      "likeCount": 0,
+      "isLiked": false,
+      "isSaved": false,
+      "modalImages": [
+        "/images/the_sims4.png",
+        "/images/the_sims4.png",
+        "/images/the_sims4.png"
       ]
     },
     {
-      "id": "27",
+      "id": 27,
       "genreId": 6,
       "title": "Cities: Skylines",
       "developer": "Colossal Order",
@@ -434,10 +642,18 @@
         "건설",
         "경영",
         "샌드박스"
+      ],
+      "likeCount": 0,
+      "isLiked": false,
+      "isSaved": false,
+      "modalImages": [
+        "/images/cities_skylines.png",
+        "/images/cities_skylines.png",
+        "/images/cities_skylines.png"
       ]
     },
     {
-      "id": "28",
+      "id": 28,
       "genreId": 6,
       "title": "Football Manager 2024",
       "developer": "Sports Interactive",
@@ -450,10 +666,18 @@
         "스포츠",
         "경영",
         "장시간플레이"
+      ],
+      "likeCount": 0,
+      "isLiked": false,
+      "isSaved": false,
+      "modalImages": [
+        "/images/fm2024.png",
+        "/images/fm2024.png",
+        "/images/fm2024.png"
       ]
     },
     {
-      "id": "29",
+      "id": 29,
       "genreId": 6,
       "title": "Microsoft Flight Simulator",
       "developer": "Asobo Studio",
@@ -466,10 +690,18 @@
         "시뮬레이터",
         "고사양",
         "리얼리티"
+      ],
+      "likeCount": 0,
+      "isLiked": false,
+      "isSaved": false,
+      "modalImages": [
+        "/images/ms_flight_simul.png",
+        "/images/ms_flight_simul.png",
+        "/images/ms_flight_simul.png"
       ]
     },
     {
-      "id": "30",
+      "id": 30,
       "genreId": 6,
       "title": "Kerbal Space Program",
       "developer": "Squad",
@@ -482,6 +714,14 @@
         "우주",
         "물리엔진",
         "샌드박스"
+      ],
+      "likeCount": 0,
+      "isLiked": false,
+      "isSaved": false,
+      "modalImages": [
+        "/images/kerbal_space_program.png",
+        "/images/kerbal_space_program.png",
+        "/images/kerbal_space_program.png"
       ]
     },
     {
@@ -498,7 +738,15 @@
         "신화",
         "실시간"
       ],
-      "id": "od8j5NeqEWg"
+      "id": 31,
+      "likeCount": 0,
+      "isLiked": false,
+      "isSaved": false,
+      "modalImages": [
+        "/images/AgeofMythology.png",
+        "/images/AgeofMythology.png",
+        "/images/AgeofMythology.png"
+      ]
     },
     {
       "genreId": 4,
@@ -514,7 +762,15 @@
         "한국형",
         "전략"
       ],
-      "id": "sDM_N01tMt8"
+      "id": 32,
+      "likeCount": 0,
+      "isLiked": false,
+      "isSaved": false,
+      "modalImages": [
+        "/images/seven_years_war_2+.png",
+        "/images/seven_years_war_2+.png",
+        "/images/seven_years_war_2+.png"
+      ]
     },
     {
       "genreId": 4,
@@ -530,38 +786,68 @@
         "실시간",
         "전쟁"
       ],
-      "id": "2vVapcRbmsY"
+      "id": 2,
+      "likeCount": 0,
+      "isLiked": false,
+      "isSaved": false,
+      "modalImages": [
+        "/images/coc_zerohour.png",
+        "/images/coc_zerohour.png",
+        "/images/coc_zerohour.png"
+      ]
+    },
+    {
+      "genreId": 1,
+      "title": "ㄹ",
+      "developer": "ㄹ",
+      "releaseYear": 2024,
+      "description": "ㅇ",
+      "image": "",
+      "modalImages": [
+        "",
+        "",
+        ""
+      ],
+      "rating": 5,
+      "reviewCount": 1,
+      "tags": [
+        "ㅇ"
+      ],
+      "likeCount": 0,
+      "isLiked": false,
+      "isSaved": false,
+      "id": 33
     }
   ],
   "genres": [
     {
-      "id": "1",
+      "id": 1,
       "genreName": "RPG"
     },
     {
-      "id": "2",
+      "id": 2,
       "genreName": "FPS"
     },
     {
-      "id": "3",
+      "id": 3,
       "genreName": "Action"
     },
     {
-      "id": "4",
+      "id": 4,
       "genreName": "Strategy"
     },
     {
-      "id": "5",
+      "id": 5,
       "genreName": "Indie"
     },
     {
-      "id": "6",
+      "id": 6,
       "genreName": "Simulation"
     }
   ],
   "reviews": [
     {
-      "id": "1",
+      "id": 1,
       "gameId": 1,
       "author": "스토리파",
       "rating": 5,
@@ -570,7 +856,7 @@
       "createdAt": "2025-11-12T10:20:00.000Z"
     },
     {
-      "id": "2",
+      "id": 2,
       "gameId": 1,
       "author": "게이머123",
       "rating": 5,
@@ -579,7 +865,7 @@
       "createdAt": "2026-02-04T15:30:00.000Z"
     },
     {
-      "id": "3",
+      "id": 3,
       "gameId": 1,
       "author": "익명52",
       "rating": 4,
@@ -588,7 +874,7 @@
       "createdAt": "2026-05-18T09:12:00.000Z"
     },
     {
-      "id": "4",
+      "id": 4,
       "gameId": 2,
       "author": "다크소울팬",
       "rating": 5,
@@ -597,7 +883,7 @@
       "createdAt": "2025-08-20T14:10:00.000Z"
     },
     {
-      "id": "5",
+      "id": 5,
       "gameId": 2,
       "author": "고인물99",
       "rating": 5,
@@ -606,7 +892,7 @@
       "createdAt": "2026-01-10T22:45:00.000Z"
     },
     {
-      "id": "6",
+      "id": 6,
       "gameId": 2,
       "author": "뉴비",
       "rating": 3,
@@ -615,7 +901,7 @@
       "createdAt": "2026-06-02T11:05:00.000Z"
     },
     {
-      "id": "7",
+      "id": 7,
       "gameId": 3,
       "author": "자유인",
       "rating": 5,
@@ -624,7 +910,7 @@
       "createdAt": "2025-09-01T12:00:00.000Z"
     },
     {
-      "id": "8",
+      "id": 8,
       "gameId": 3,
       "author": "타임머신",
       "rating": 5,
@@ -633,7 +919,7 @@
       "createdAt": "2025-12-15T18:20:00.000Z"
     },
     {
-      "id": "9",
+      "id": 9,
       "gameId": 3,
       "author": "겜돌이77",
       "rating": 4,
@@ -642,7 +928,7 @@
       "createdAt": "2026-04-11T08:30:00.000Z"
     },
     {
-      "id": "10",
+      "id": 10,
       "gameId": 4,
       "author": "JRPG매니아",
       "rating": 5,
@@ -651,7 +937,7 @@
       "createdAt": "2025-10-05T19:00:00.000Z"
     },
     {
-      "id": "11",
+      "id": 11,
       "gameId": 4,
       "author": "엔딩봄",
       "rating": 4,
@@ -660,7 +946,7 @@
       "createdAt": "2026-03-22T14:15:00.000Z"
     },
     {
-      "id": "12",
+      "id": 12,
       "gameId": 4,
       "author": "스트리머",
       "rating": 4,
@@ -669,7 +955,7 @@
       "createdAt": "2026-07-01T20:50:00.000Z"
     },
     {
-      "id": "13",
+      "id": 13,
       "gameId": 5,
       "author": "갓겜만함",
       "rating": 5,
@@ -678,7 +964,7 @@
       "createdAt": "2025-09-18T16:40:00.000Z"
     },
     {
-      "id": "14",
+      "id": 14,
       "gameId": 5,
       "author": "100시간돌파",
       "rating": 5,
@@ -687,7 +973,7 @@
       "createdAt": "2026-02-28T13:25:00.000Z"
     },
     {
-      "id": "15",
+      "id": 15,
       "gameId": 5,
       "author": "전략왕",
       "rating": 4,
@@ -696,7 +982,7 @@
       "createdAt": "2026-06-15T17:10:00.000Z"
     },
     {
-      "id": "16",
+      "id": 16,
       "gameId": 6,
       "author": "프로게이머",
       "rating": 5,
@@ -705,7 +991,7 @@
       "createdAt": "2025-11-30T21:00:00.000Z"
     },
     {
-      "id": "17",
+      "id": 17,
       "gameId": 6,
       "author": "익명",
       "rating": 4,
@@ -714,7 +1000,7 @@
       "createdAt": "2026-03-05T19:30:00.000Z"
     },
     {
-      "id": "18",
+      "id": 18,
       "gameId": 6,
       "author": "주말게이머",
       "rating": 3,
@@ -723,7 +1009,7 @@
       "createdAt": "2026-05-20T10:15:00.000Z"
     },
     {
-      "id": "19",
+      "id": 19,
       "gameId": 7,
       "author": "영웅슈터",
       "rating": 4,
@@ -732,7 +1018,7 @@
       "createdAt": "2025-10-12T11:40:00.000Z"
     },
     {
-      "id": "20",
+      "id": 20,
       "gameId": 7,
       "author": "솔직리뷰어",
       "rating": 4,
@@ -741,7 +1027,7 @@
       "createdAt": "2026-01-25T16:05:00.000Z"
     },
     {
-      "id": "21",
+      "id": 21,
       "gameId": 7,
       "author": "방구석셰프",
       "rating": 3,
@@ -750,7 +1036,7 @@
       "createdAt": "2026-04-30T23:10:00.000Z"
     },
     {
-      "id": "22",
+      "id": 22,
       "gameId": 8,
       "author": "e스포츠팬",
       "rating": 5,
@@ -759,7 +1045,7 @@
       "createdAt": "2025-08-05T13:00:00.000Z"
     },
     {
-      "id": "23",
+      "id": 23,
       "gameId": 8,
       "author": "FPS마니아",
       "rating": 4,
@@ -768,7 +1054,7 @@
       "createdAt": "2026-02-14T18:20:00.000Z"
     },
     {
-      "id": "24",
+      "id": 24,
       "gameId": 8,
       "author": "타임슬립",
       "rating": 4,
@@ -777,7 +1063,7 @@
       "createdAt": "2026-06-10T12:45:00.000Z"
     },
     {
-      "id": "25",
+      "id": 25,
       "gameId": 9,
       "author": "배틀로얄",
       "rating": 5,
@@ -786,7 +1072,7 @@
       "createdAt": "2025-12-01T09:50:00.000Z"
     },
     {
-      "id": "26",
+      "id": 26,
       "gameId": 9,
       "author": "겜돌이",
       "rating": 4,
@@ -795,7 +1081,7 @@
       "createdAt": "2026-03-18T15:15:00.000Z"
     },
     {
-      "id": "27",
+      "id": 27,
       "gameId": 9,
       "author": "뉴비33",
       "rating": 3,
@@ -804,7 +1090,7 @@
       "createdAt": "2026-07-02T21:00:00.000Z"
     },
     {
-      "id": "28",
+      "id": 28,
       "gameId": 10,
       "author": "밀리터리",
       "rating": 4,
@@ -813,7 +1099,7 @@
       "createdAt": "2025-11-22T14:30:00.000Z"
     },
     {
-      "id": "29",
+      "id": 29,
       "gameId": 10,
       "author": "캠페인파",
       "rating": 3,
@@ -822,7 +1108,7 @@
       "createdAt": "2026-02-09T10:10:00.000Z"
     },
     {
-      "id": "30",
+      "id": 30,
       "gameId": 10,
       "author": "솔직리뷰어",
       "rating": 3,
@@ -831,7 +1117,7 @@
       "createdAt": "2026-05-05T17:40:00.000Z"
     },
     {
-      "id": "31",
+      "id": 31,
       "gameId": 11,
       "author": "액션마니아",
       "rating": 5,
@@ -840,7 +1126,7 @@
       "createdAt": "2025-09-10T20:00:00.000Z"
     },
     {
-      "id": "32",
+      "id": 32,
       "gameId": 11,
       "author": "스토리파",
       "rating": 5,
@@ -849,7 +1135,7 @@
       "createdAt": "2026-01-08T11:25:00.000Z"
     },
     {
-      "id": "33",
+      "id": 33,
       "gameId": 11,
       "author": "주말게이머",
       "rating": 4,
@@ -858,7 +1144,7 @@
       "createdAt": "2026-04-20T16:00:00.000Z"
     },
     {
-      "id": "34",
+      "id": 34,
       "gameId": 12,
       "author": "검술왕",
       "rating": 5,
@@ -867,7 +1153,7 @@
       "createdAt": "2025-10-28T13:15:00.000Z"
     },
     {
-      "id": "35",
+      "id": 35,
       "gameId": 12,
       "author": "고난이도성애자",
       "rating": 4,
@@ -876,7 +1162,7 @@
       "createdAt": "2026-02-19T22:30:00.000Z"
     },
     {
-      "id": "36",
+      "id": 36,
       "gameId": 12,
       "author": "뉴비77",
       "rating": 4,
@@ -885,7 +1171,7 @@
       "createdAt": "2026-06-08T10:00:00.000Z"
     },
     {
-      "id": "37",
+      "id": 37,
       "gameId": 13,
       "author": "고딕호러",
       "rating": 5,
@@ -894,7 +1180,7 @@
       "createdAt": "2025-08-19T18:45:00.000Z"
     },
     {
-      "id": "38",
+      "id": 38,
       "gameId": 13,
       "author": "소울라이크",
       "rating": 5,
@@ -903,7 +1189,7 @@
       "createdAt": "2025-12-30T09:20:00.000Z"
     },
     {
-      "id": "39",
+      "id": 39,
       "gameId": 13,
       "author": "자유인",
       "rating": 4,
@@ -912,7 +1198,7 @@
       "createdAt": "2026-05-14T15:10:00.000Z"
     },
     {
-      "id": "40",
+      "id": 40,
       "gameId": 14,
       "author": "콤보장인",
       "rating": 5,
@@ -921,7 +1207,7 @@
       "createdAt": "2025-11-04T12:30:00.000Z"
     },
     {
-      "id": "41",
+      "id": 41,
       "gameId": 14,
       "author": "스타일리시",
       "rating": 4,
@@ -930,7 +1216,7 @@
       "createdAt": "2026-03-01T21:15:00.000Z"
     },
     {
-      "id": "42",
+      "id": 42,
       "gameId": 14,
       "author": "익명",
       "rating": 4,
@@ -939,7 +1225,7 @@
       "createdAt": "2026-06-25T11:40:00.000Z"
     },
     {
-      "id": "43",
+      "id": 43,
       "gameId": 15,
       "author": "감성파",
       "rating": 5,
@@ -948,7 +1234,7 @@
       "createdAt": "2025-10-15T15:00:00.000Z"
     },
     {
-      "id": "44",
+      "id": 44,
       "gameId": 15,
       "author": "철학가",
       "rating": 5,
@@ -957,7 +1243,7 @@
       "createdAt": "2026-01-20T19:20:00.000Z"
     },
     {
-      "id": "45",
+      "id": 45,
       "gameId": 15,
       "author": "엔딩봄88",
       "rating": 4,
@@ -966,7 +1252,7 @@
       "createdAt": "2026-04-18T08:05:00.000Z"
     },
     {
-      "id": "46",
+      "id": 46,
       "gameId": 16,
       "author": "한턴만더",
       "rating": 5,
@@ -975,7 +1261,7 @@
       "createdAt": "2025-09-08T22:10:00.000Z"
     },
     {
-      "id": "47",
+      "id": 47,
       "gameId": 16,
       "author": "문명인",
       "rating": 4,
@@ -984,7 +1270,7 @@
       "createdAt": "2026-02-12T13:40:00.000Z"
     },
     {
-      "id": "48",
+      "id": 48,
       "gameId": 16,
       "author": "전략왕",
       "rating": 4,
@@ -993,7 +1279,7 @@
       "createdAt": "2026-05-30T17:25:00.000Z"
     },
     {
-      "id": "49",
+      "id": 49,
       "gameId": 17,
       "author": "RTS전설",
       "rating": 4,
@@ -1002,7 +1288,7 @@
       "createdAt": "2025-11-15T10:00:00.000Z"
     },
     {
-      "id": "50",
+      "id": 50,
       "gameId": 17,
       "author": "게이머",
       "rating": 4,
@@ -1011,7 +1297,7 @@
       "createdAt": "2026-03-10T16:45:00.000Z"
     },
     {
-      "id": "51",
+      "id": 51,
       "gameId": 17,
       "author": "익명10",
       "rating": 4,
@@ -1020,7 +1306,7 @@
       "createdAt": "2026-07-08T12:00:00.000Z"
     },
     {
-      "id": "52",
+      "id": 52,
       "gameId": 18,
       "author": "외계인사냥꾼",
       "rating": 4,
@@ -1029,7 +1315,7 @@
       "createdAt": "2025-10-01T14:20:00.000Z"
     },
     {
-      "id": "53",
+      "id": 53,
       "gameId": 18,
       "author": "턴제성애자",
       "rating": 4,
@@ -1038,7 +1324,7 @@
       "createdAt": "2026-01-14T20:10:00.000Z"
     },
     {
-      "id": "54",
+      "id": 54,
       "gameId": 18,
       "author": "고난이도",
       "rating": 4,
@@ -1047,7 +1333,7 @@
       "createdAt": "2026-04-25T11:35:00.000Z"
     },
     {
-      "id": "55",
+      "id": 55,
       "gameId": 19,
       "author": "역사학자",
       "rating": 4,
@@ -1056,7 +1342,7 @@
       "createdAt": "2025-12-20T15:50:00.000Z"
     },
     {
-      "id": "56",
+      "id": 56,
       "gameId": 19,
       "author": "중세마니아",
       "rating": 4,
@@ -1065,7 +1351,7 @@
       "createdAt": "2026-03-29T18:00:00.000Z"
     },
     {
-      "id": "57",
+      "id": 57,
       "gameId": 19,
       "author": "뉴비55",
       "rating": 3,
@@ -1074,7 +1360,7 @@
       "createdAt": "2026-06-18T09:30:00.000Z"
     },
     {
-      "id": "58",
+      "id": 58,
       "gameId": 20,
       "author": "워해머",
       "rating": 5,
@@ -1083,7 +1369,7 @@
       "createdAt": "2025-08-30T17:15:00.000Z"
     },
     {
-      "id": "59",
+      "id": 59,
       "gameId": 20,
       "author": "대규모전투",
       "rating": 4,
@@ -1092,7 +1378,7 @@
       "createdAt": "2026-02-01T21:40:00.000Z"
     },
     {
-      "id": "60",
+      "id": 60,
       "gameId": 20,
       "author": "판타지덕후",
       "rating": 4,
@@ -1101,7 +1387,7 @@
       "createdAt": "2026-05-12T13:05:00.000Z"
     },
     {
-      "id": "61",
+      "id": 61,
       "gameId": 21,
       "author": "픽셀러",
       "rating": 5,
@@ -1110,7 +1396,7 @@
       "createdAt": "2025-09-25T11:00:00.000Z"
     },
     {
-      "id": "62",
+      "id": 62,
       "gameId": 21,
       "author": "메트로바니아",
       "rating": 5,
@@ -1119,7 +1405,7 @@
       "createdAt": "2026-01-05T16:30:00.000Z"
     },
     {
-      "id": "63",
+      "id": 63,
       "gameId": 21,
       "author": "감성유저",
       "rating": 4,
@@ -1128,7 +1414,7 @@
       "createdAt": "2026-04-02T20:20:00.000Z"
     },
     {
-      "id": "64",
+      "id": 64,
       "gameId": 22,
       "author": "농부",
       "rating": 5,
@@ -1137,7 +1423,7 @@
       "createdAt": "2025-07-15T02:45:00.000Z"
     },
     {
-      "id": "65",
+      "id": 65,
       "gameId": 22,
       "author": "힐링중",
       "rating": 5,
@@ -1146,7 +1432,7 @@
       "createdAt": "2025-11-10T14:10:00.000Z"
     },
     {
-      "id": "66",
+      "id": 66,
       "gameId": 22,
       "author": "귀농꿈나무",
       "rating": 5,
@@ -1155,7 +1441,7 @@
       "createdAt": "2026-03-14T09:00:00.000Z"
     },
     {
-      "id": "67",
+      "id": 67,
       "gameId": 23,
       "author": "로그라이크",
       "rating": 5,
@@ -1164,7 +1450,7 @@
       "createdAt": "2025-10-20T18:30:00.000Z"
     },
     {
-      "id": "68",
+      "id": 68,
       "gameId": 23,
       "author": "하데스팬",
       "rating": 5,
@@ -1173,7 +1459,7 @@
       "createdAt": "2026-02-22T21:15:00.000Z"
     },
     {
-      "id": "69",
+      "id": 69,
       "gameId": 23,
       "author": "액션파",
       "rating": 4,
@@ -1182,7 +1468,7 @@
       "createdAt": "2026-06-01T10:40:00.000Z"
     },
     {
-      "id": "70",
+      "id": 70,
       "gameId": 24,
       "author": "플랫포머",
       "rating": 5,
@@ -1191,7 +1477,7 @@
       "createdAt": "2025-08-12T15:20:00.000Z"
     },
     {
-      "id": "71",
+      "id": 71,
       "gameId": 24,
       "author": "등산가",
       "rating": 4,
@@ -1200,7 +1486,7 @@
       "createdAt": "2025-12-05T11:10:00.000Z"
     },
     {
-      "id": "72",
+      "id": 72,
       "gameId": 24,
       "author": "도전과제",
       "rating": 4,
@@ -1209,7 +1495,7 @@
       "createdAt": "2026-04-16T19:05:00.000Z"
     },
     {
-      "id": "73",
+      "id": 73,
       "gameId": 25,
       "author": "스토리파",
       "rating": 5,
@@ -1218,7 +1504,7 @@
       "createdAt": "2025-09-03T13:40:00.000Z"
     },
     {
-      "id": "74",
+      "id": 74,
       "gameId": 25,
       "author": "선택지",
       "rating": 5,
@@ -1227,7 +1513,7 @@
       "createdAt": "2026-01-28T17:00:00.000Z"
     },
     {
-      "id": "75",
+      "id": 75,
       "gameId": 25,
       "author": "감성인디",
       "rating": 4,
@@ -1236,7 +1522,7 @@
       "createdAt": "2026-05-22T22:15:00.000Z"
     },
     {
-      "id": "76",
+      "id": 76,
       "gameId": 26,
       "author": "심즈덕후",
       "rating": 4,
@@ -1245,7 +1531,7 @@
       "createdAt": "2025-10-18T10:30:00.000Z"
     },
     {
-      "id": "77",
+      "id": 77,
       "gameId": 26,
       "author": "건축가",
       "rating": 4,
@@ -1254,7 +1540,7 @@
       "createdAt": "2026-02-17T14:50:00.000Z"
     },
     {
-      "id": "78",
+      "id": 78,
       "gameId": 26,
       "author": "인생시뮬",
       "rating": 4,
@@ -1263,7 +1549,7 @@
       "createdAt": "2026-06-12T18:25:00.000Z"
     },
     {
-      "id": "79",
+      "id": 79,
       "gameId": 27,
       "author": "시장님",
       "rating": 5,
@@ -1272,7 +1558,7 @@
       "createdAt": "2025-11-28T09:15:00.000Z"
     },
     {
-      "id": "80",
+      "id": 80,
       "gameId": 27,
       "author": "건설왕",
       "rating": 4,
@@ -1281,7 +1567,7 @@
       "createdAt": "2026-03-08T15:40:00.000Z"
     },
     {
-      "id": "81",
+      "id": 81,
       "gameId": 27,
       "author": "교통정체",
       "rating": 4,
@@ -1290,7 +1576,7 @@
       "createdAt": "2026-07-05T11:20:00.000Z"
     },
     {
-      "id": "82",
+      "id": 82,
       "gameId": 28,
       "author": "축구감독",
       "rating": 5,
@@ -1299,7 +1585,7 @@
       "createdAt": "2025-08-22T23:00:00.000Z"
     },
     {
-      "id": "83",
+      "id": 83,
       "gameId": 28,
       "author": "폐인생성기",
       "rating": 4,
@@ -1308,7 +1594,7 @@
       "createdAt": "2026-01-02T12:35:00.000Z"
     },
     {
-      "id": "84",
+      "id": 84,
       "gameId": 28,
       "author": "유망주수집",
       "rating": 4,
@@ -1317,7 +1603,7 @@
       "createdAt": "2026-04-14T16:50:00.000Z"
     },
     {
-      "id": "85",
+      "id": 85,
       "gameId": 29,
       "author": "조종사",
       "rating": 5,
@@ -1326,7 +1612,7 @@
       "createdAt": "2025-09-14T14:10:00.000Z"
     },
     {
-      "id": "86",
+      "id": 86,
       "gameId": 29,
       "author": "비행마니아",
       "rating": 4,
@@ -1335,7 +1621,7 @@
       "createdAt": "2026-02-25T19:45:00.000Z"
     },
     {
-      "id": "87",
+      "id": 87,
       "gameId": 29,
       "author": "고사양컴",
       "rating": 4,
@@ -1344,7 +1630,7 @@
       "createdAt": "2026-06-20T10:00:00.000Z"
     },
     {
-      "id": "88",
+      "id": 88,
       "gameId": 30,
       "author": "우주비행사",
       "rating": 5,
@@ -1353,7 +1639,7 @@
       "createdAt": "2025-10-10T11:50:00.000Z"
     },
     {
-      "id": "89",
+      "id": 89,
       "gameId": 30,
       "author": "물리학자",
       "rating": 4,
@@ -1362,7 +1648,7 @@
       "createdAt": "2026-03-03T16:15:00.000Z"
     },
     {
-      "id": "90",
+      "id": 90,
       "gameId": 30,
       "author": "커발팬",
       "rating": 3,
@@ -1376,8 +1662,7 @@
       "rating": 5,
       "content": "갓겜",
       "playTime": 120,
-      "createdAt": "2026-07-22T06:11:16.324Z",
-      "id": "HNckn3CkrSE"
+      "createdAt": "2026-07-22T06:11:16.324Z"
     },
     {
       "gameId": 2,
@@ -1385,8 +1670,7 @@
       "rating": 5,
       "content": "테스트",
       "playTime": 11212,
-      "createdAt": "2026-07-22T06:12:26.682Z",
-      "id": "BlWosfSAlKA"
+      "createdAt": "2026-07-22T06:12:26.682Z"
     },
     {
       "gameId": 3,
@@ -1394,8 +1678,7 @@
       "rating": 5,
       "content": "ㄴㅌㅇㄴㅇㄹ",
       "playTime": 1,
-      "createdAt": "2026-07-22T06:13:30.095Z",
-      "id": "O2_TD1hhfCA"
+      "createdAt": "2026-07-22T06:13:30.095Z"
     },
     {
       "gameId": 11,
@@ -1403,8 +1686,24 @@
       "rating": 1,
       "content": "ㅗㅗ",
       "playTime": 1,
-      "createdAt": "2026-07-22T06:15:19.677Z",
-      "id": "Zi2UzW3zMn4"
+      "createdAt": "2026-07-22T06:15:19.677Z"
+    },
+    {
+      "gameId": 10,
+      "author": "reeeee",
+      "rating": 5,
+      "content": "sfsdfsdf",
+      "playTime": 20202,
+      "createdAt": "2026-07-23T06:03:39.734Z"
+    },
+    {
+      "gameId": 33,
+      "author": "ㅇ",
+      "rating": 5,
+      "content": "ㅇ",
+      "playTime": 1,
+      "createdAt": "2026-07-23T06:32:16.148Z",
+      "id": 91
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

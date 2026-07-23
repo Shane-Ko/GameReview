@@ -7,9 +7,12 @@ export interface Game {
     releaseYear: number;
     description: string;
     image: string;
+    modalImage?: string[];
     rating: number;
     reviewCount: number;
     tags: string[];
+    isLiked?: boolean;
+    modalImages?: string[];
 }
 
 export interface Genre {

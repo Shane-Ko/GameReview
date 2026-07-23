@@ -1,77 +1,49 @@
-# React + TypeScript + Vite
+# GameReview - Dark Realm
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+다크 판타지 테마의 게임 리뷰 사이트
 
-Currently, two official plugins are available:
+## 기술 스택
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Frontend**: Vite + React + TypeScript
+- **Routing**: React Router
+- **UI**: Swiper.js (히어로 슬라이드, 이미지 캐러셀)
+- **Styling**: CSS (Cinzel + Noto Serif KR + Inter)
+- **Backend (Mock)**: json-server
 
-## React Compiler
+## 주요 기능
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- 게임 목록 (30+ 개), 장르 필터, 정렬
+- 게임 상세 모달 (이미지 캐러셀, 별점, 리뷰)
+- 리뷰 CRUD
+- 좋아요/찜 토글 (PATCH)
+- 찜 항목만 보기 필터
+- 관리자 페이지 (게임 등록/수정/삭제)
+- 베스트 페이지 (Top 10)
+- 커스텀 삭제 확인 모달
+- 반응형 (모바일/태블릿/데스크탑)
 
-Note: This will impact Vite dev & build performances.
+## 실행 방법
 
-## Expanding the ESLint configuration
+```bash
+# 의존성 설치
+npm install
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+# json-server (별도 터미널)
+npm run server
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+# React 개발 서버
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+브라우저에서 http://localhost:5173 접속
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 폴더 구조
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
+\`\`\`
+src/
+├── components/     # 재사용 컴포넌트
+├── pages/          # 라우트 페이지
+├── types/          # TypeScript 타입 정의
+├── App.tsx
+└── App.css
+\`\`\`

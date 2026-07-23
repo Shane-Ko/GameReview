@@ -4,7 +4,7 @@ export default function Header() {
     return (
         <nav className="top-nav">
             <div className="nav-logo">
-                <Link to="/">DARK REALM</Link>
+                <Link to="/">Under2Hours</Link>
             </div>
             <div className="nav-menu">
                 <Link to="/">REVIEWS</Link>

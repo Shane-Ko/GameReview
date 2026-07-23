@@ -5,32 +5,91 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-y: scroll;
+}
+
 body {
-  background: #0a0806;
-  color: #e8dcc4;
-  font-family: 'Georgia', 'Times New Roman', serif;
+  background: #0b0a08;
+  color: #d8cfbf;
+  font-family: 'Inter', 'Noto Serif KR', sans-serif;
   min-height: 100vh;
 }
 
 /* ========== 히어로 섹션 (제목) ========== */
-/* ========== 히어로 섹션 ========== */
 .hero {
+  position: relative;
   text-align: center;
   padding: 100px 40px 120px;
-  background:
-    radial-gradient(ellipse at center, rgba(212, 175, 55, 0.05) 0%, transparent 60%),
-    repeating-linear-gradient(135deg,
-      transparent,
-      transparent 20px,
-      rgba(212, 175, 55, 0.02) 20px,
-      rgba(212, 175, 55, 0.02) 21px);
-  border-bottom: 1px solid #1a1510;
+  border-bottom: 1px solid #14100c;
+  overflow: hidden;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Swiper 배경 */
+.hero-swiper {
+  position: absolute !important;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-slide {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* 어둡게 오버레이 (텍스트 잘 보이게) */
+.hero-slide::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg,
+      rgba(10, 8, 6, 0.85) 0%,
+      rgba(10, 8, 6, 0.6) 50%,
+      rgba(10, 8, 6, 0.85) 100%);
+}
+
+/* Swiper 페이지네이션 원 */
+.hero-swiper .swiper-pagination {
+  bottom: 20px !important;
+  z-index: 3;
+}
+
+.hero-swiper .swiper-pagination-bullet {
+  background: #7a6f5a;
+  opacity: 0.6;
+  width: 10px;
+  height: 10px;
+  transition: all 0.3s;
+}
+
+.hero-swiper .swiper-pagination-bullet-active {
+  background: #c9a24a;
+  opacity: 1;
+  width: 30px;
+  border-radius: 5px;
+  /* 활성화된 건 알약 모양 */
+}
+
+/* 텍스트 콘텐츠 - 위 레이어 */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
 }
 
 .hero-tagline {
   font-family: 'Cinzel', Georgia, serif;
   font-size: 0.85rem;
-  color: #d4af37;
+  color: #c9a24a;
   letter-spacing: 0.4em;
   text-transform: uppercase;
   margin-bottom: 32px;
@@ -39,7 +98,7 @@ body {
 .hero-title {
   font-family: 'Cinzel', Georgia, serif;
   font-size: 5rem;
-  color: #f4e4bc;
+  color: #ede0bd;
   letter-spacing: 0.05em;
   line-height: 1.1;
   font-weight: 400;
@@ -50,7 +109,7 @@ body {
 }
 
 .hero-subtitle {
-  color: #c4b596;
+  color: #c9bfa8;
   line-height: 1.9;
   font-size: 1rem;
   max-width: 600px;
@@ -66,8 +125,8 @@ body {
 
 .hero-btn {
   background: transparent;
-  color: #d4af37;
-  border: 1px solid #d4af37;
+  color: #c9a24a;
+  border: 1px solid #c9a24a;
   padding: 16px 40px;
   font-family: 'Cinzel', Georgia, serif;
   font-size: 0.85rem;
@@ -80,8 +139,8 @@ body {
 }
 
 .hero-btn:hover {
-  background: #d4af37;
-  color: #0a0806;
+  background: #c9a24a;
+  color: #0b0a08;
 }
 
 .hero-btn.primary {
@@ -94,260 +153,427 @@ h1:not(.hero-title) {
   font-family: 'Cinzel', Georgia, serif;
   font-size: 2rem;
   letter-spacing: 0.1em;
-  color: #f4e4bc;
+  color: #ede0bd;
   padding: 40px 0 20px;
   font-weight: 400;
   text-transform: uppercase;
 }
 
-/* ========== 게임 그리드 ========== */
-.game-grid {
+/* ========== 카드 그리드 ========== */
+.card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 24px;
+  gap: 22px;
   padding: 40px 80px;
 }
 
-/* ========== 게임 카드 ========== */
-.game-card {
-  background: linear-gradient(135deg, #1a1510 0%, #0f0c08 100%);
-  border: 1px solid #2a2318;
-  border-radius: 2px;
-  padding: 0;
+/* ========== 카드 ========== */
+.card {
   cursor: pointer;
-  transition: all 0.3s ease;
-  overflow: hidden;
+  background: #14100c;
+  border: 1px solid #241f16;
+  transition:
+    transform .35s cubic-bezier(.2, .7, .2, 1),
+    box-shadow .35s,
+    border-color .35s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 24px 48px -12px rgba(0, 0, 0, .9),
+    0 0 0 1px rgba(201, 162, 74, .27);
+  border-color: #c9a24a;
+}
+
+/* 포스터 */
+.card-poster {
   position: relative;
-  display: flex;
-  flex-direction: column;
-}
-
-.game-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: repeating-linear-gradient(135deg,
-      transparent,
-      transparent 10px,
-      rgba(212, 175, 55, 0.02) 10px,
-      rgba(212, 175, 55, 0.02) 11px);
-  pointer-events: none;
-}
-
-.game-card:hover {
-  border-color: #d4af37;
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(212, 175, 55, 0.1);
-}
-
-.game-card img {
-  width: 100%;
-  height: 280px;
-  object-fit: cover;
-  background: #1a1510;
-  display: block;
-}
-
-.game-card .game-title {
-  font-family: 'Cinzel', Georgia, serif;
-  font-size: 1.1rem;
-  color: #f4e4bc;
-  padding: 16px 16px 4px;
-  letter-spacing: 0.02em;
-}
-
-.game-card .game-description {
-  font-size: 0.75rem;
-  color: #8a7a5c;
-  padding: 0 16px;
-  font-style: italic;
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
+  aspect-ratio: 3 / 4;
   overflow: hidden;
+  background: repeating-linear-gradient(45deg,
+      #1a1611 0 12px,
+      #17130f 12px 24px);
 }
 
-.game-card .game-meta {
-  font-size: 0.75rem;
-  color: #8a7a5c;
-  padding: 4px 16px;
-  letter-spacing: 0.05em;
-}
-
-.game-card .game-rate {
-  font-size: 0.85rem;
-  color: #d4af37;
-  padding: 8px 16px 4px;
-  letter-spacing: 0.05em;
-}
-
-.game-card .game-tag {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px;
-  padding: 8px 16px 16px;
-}
-
-.game-card .tag {
-  font-size: 0.65rem;
-  color: #6b5c40;
-  background: rgba(212, 175, 55, 0.05);
-  padding: 2px 8px;
-  border-radius: 2px;
-  letter-spacing: 0.05em;
-}
-
-/* ========== 상세 모달 (다크 배경) ========== */
-.game-modal {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.85);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
-  padding: 40px 20px;
-}
-
-.game-modal .modal-content {
-  background: #0a0806;
-  border: 1px solid #2a2318;
-  color: #e8dcc4;
-  max-width: 1100px;
-  width: 100%;
-  max-height: 90vh;
-  overflow: hidden;
-  display: grid;
-  grid-template-columns: 380px 1fr;
-  position: relative;
-}
-
-/* 왼쪽 이미지 영역 */
-.game-modal .game-image {
-  background: linear-gradient(135deg, #1a1510 0%, #0f0c08 100%);
-  min-height: 600px;
-  position: relative;
-  overflow: hidden;
-}
-
-.game-modal .game-image::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: repeating-linear-gradient(135deg,
-      transparent,
-      transparent 20px,
-      rgba(212, 175, 55, 0.03) 20px,
-      rgba(212, 175, 55, 0.03) 22px);
-}
-
-.game-modal .game-image::after {
-  content: "[ POSTER ]";
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  font-size: 0.7rem;
-  color: #4a3f2c;
-  letter-spacing: 0.1em;
-  font-family: 'Courier New', monospace;
-}
-
-.game-modal .game-image img {
+.card-poster img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.9;
+  display: block;
 }
 
-/* 오른쪽 상세 영역 */
-.game-modal .game-detail {
-  padding: 40px 48px;
+/* 하단 그라데이션 페이드 + POSTER 캡션 */
+.card-poster .fade {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  padding: 14px;
+  background: linear-gradient(180deg,
+      rgba(11, 10, 8, 0) 40%,
+      rgba(11, 10, 8, .92) 100%);
+  pointer-events: none;
+}
+
+.card-poster .fade .caption {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: .15em;
+  color: #5a5040;
+}
+
+/* 장르 뱃지 */
+.card-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 4px 10px;
+  background: rgba(11, 10, 8, .8);
+  border: 1px solid #3a3226;
+  font-family: 'Cinzel', serif;
+  font-size: 10px;
+  letter-spacing: .2em;
+  color: #c9a24a;
+  z-index: 2;
+}
+
+.card-developer {
+  font-family: 'Noto Serif KR', serif;
+  font-size: 12px;
+  color: #7a6f5a;
+  font-style: italic;
+  margin: 0 0 10px;
+  line-height: 1.4;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 별(찜) - 우상단 */
+.like-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 3;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: transparent;
+  color: #c9a24a;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.like-btn:hover {
+  transform: scale(1.2);
+}
+
+/* 본문 */
+.card-body {
+  padding: 18px 18px 20px;
+}
+
+.card-title {
+  font-family: 'Noto Serif KR', serif;
+  font-weight: 600;
+  font-size: 16px;
+  margin: 0 0 10px;
+  color: #ede0bd;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  word-break: break-word;
+  min-height: 2.6em;
+}
+
+.card-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.card-meta .stars {
+  color: #c9a24a;
+  font-size: 13px;
+  letter-spacing: .05em;
+}
+
+.card-meta .rating {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: #ede0bd;
+  font-weight: 500;
+}
+
+.card-meta .reviews {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  color: #7a6f5a;
+}
+
+/* ========== 상세 모달 (신규 디자인) ========== */
+
+/* 폰트 import - App.css 맨 위에 추가 필요 (Cinzel은 이미 있을 것) */
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;800&family=Inter:wght@400;500;600&display=swap'); */
+
+@keyframes modalIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes overlayIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* 오버레이 */
+.game-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background: rgba(4, 3, 2, 0.88);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  animation: overlayIn 0.25s ease-out;
+}
+
+/* 컨테이너 */
+.game-modal .modal-content {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  max-height: 88vh;
   overflow-y: auto;
-  max-height: 90vh;
+  background: #14100c;
+  border: 1px solid #3a3226;
+  box-shadow:
+    0 40px 80px -20px rgba(0, 0, 0, 0.95),
+    0 0 0 1px rgba(201, 162, 74, 0.15);
+  animation: modalIn 0.35s cubic-bezier(.2, .7, .2, 1);
+  display: block;
+  color: #d8cfbf;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.game-modal .modal-content::-webkit-scrollbar {
+  display: none;
+  /* Chrome/Safari */
+}
+
+.game-modal .game-detail {
+  max-height: none;
+  /* 안쪽 스크롤 제거 */
+  overflow: visible;
+}
+
+/* 닫기 버튼 */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 5;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #3a3226;
+  background: rgba(11, 10, 8, 0.85);
+  color: #a89b7f;
+  font-family: 'Cinzel', serif;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.close-btn:hover {
+  border-color: #c9a24a;
+  color: #ede0bd;
+}
+
+/* 왼쪽 포스터 */
+.game-modal .game-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  /* ✅ 비율 고정 - 높이 자동 계산 */
+  height: auto;
+  /* height 제거 */
+  min-height: auto;
+  border-right: none;
+  border-bottom: 1px solid #2a241a;
+  padding: 0;
+  overflow: hidden;
+}
+
+.game-modal .game-image::before,
+.game-modal .game-image::after {
+  content: none;
+  /* 기존 pseudo 제거 */
+}
+
+.game-modal .game-image img {
+  position: static;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  display: block;
+  opacity: 1;
+}
+
+.game-modal .game-image .caption {
+  position: relative;
+  z-index: 2;
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color: #5a5040;
+}
+
+/* 오른쪽 콘텐츠 */
+.game-modal .game-detail {
+  padding: 44px 48px 40px;
+  overflow-y: auto;
+  max-height: 88vh;
 }
 
 .head-genre {
-  font-family: 'Cinzel', Georgia, serif;
-  font-size: 0.75rem;
-  color: #d4af37;
-  letter-spacing: 0.2em;
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+  letter-spacing: 0.35em;
+  color: #c9a24a;
+  margin-bottom: 14px;
   text-transform: uppercase;
-  margin-bottom: 12px;
 }
 
 .game-modal .game-title {
-  font-family: 'Cinzel', Georgia, serif;
-  font-size: 2.4rem;
-  color: #f4e4bc;
-  letter-spacing: 0.02em;
-  margin-bottom: 4px;
-  font-weight: 400;
+  font-family: 'Cinzel', serif;
+  font-weight: 600;
+  font-size: 42px;
+  margin: 0 0 8px;
+  color: #ede0bd;
+  letter-spacing: 0.04em;
+  line-height: 1.1;
 }
 
-/* Rating Summary */
+/* Tagline (개발사·연도) */
+.modal-tagline {
+  font-family: 'Noto Serif KR', Georgia, serif;
+  font-size: 14px;
+  color: #7a6f5a;
+  font-style: italic;
+  margin-bottom: 24px;
+}
+
+/* Stats 바 */
 .rating-summary {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  background: rgba(20, 15, 10, 0.5);
-  border: 1px solid #2a2318;
-  padding: 20px 24px;
-  margin: 24px 0;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  gap: 0;
+  padding: 24px 32px;
+  background: #0f0c09;
+  border: 1px solid #241f16;
+  margin-bottom: 50px;
 }
 
-.rating-summary p {
-  font-size: 0.7rem;
-  color: #6b5c40;
-  letter-spacing: 0.15em;
+.rating-summary .col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* ✅ 가로 중앙 */
+  gap: 8px;
+  padding: 0 8px;
+  border-left: 1px solid #241f16;
+  text-align: center;
+  /* ✅ 텍스트 중앙 */
+}
+
+.rating-summary .col:first-child {
+  border-left: none;
+  padding-left: 0;
+}
+
+.rating-summary .label {
+  font-family: 'Cinzel', serif;
+  font-size: 18px;
+  font-weight: bold;
+  /* 10 → 12 */
+  letter-spacing: 0.3em;
+  color: #7a6f5a;
   text-transform: uppercase;
-  font-family: 'Cinzel', Georgia, serif;
 }
 
-.rating-summary p+p {
-  color: #f4e4bc;
-  font-size: 1.6rem;
-  letter-spacing: 0;
-  text-transform: none;
-  font-family: 'Cinzel', Georgia, serif;
-  margin-top: 6px;
+.rating-summary .value {
+  font-family: 'Cinzel', serif;
+  font-size: 36px;
+  /* 28 → 36 */
+  color: #ede0bd;
 }
 
-.rating-summary .game-rating,
-.rating-summary .game-reviewers,
-.rating-summary .game-genre {
-  font-family: 'Cinzel', Georgia, serif;
-  font-size: 1.4rem;
-  color: #f4e4bc;
+.rating-summary .value-genre {
+  font-family: 'Cinzel', serif;
+  font-size: 28px;
+  /* 22 → 28 */
+  color: #ede0bd;
 }
 
-.rating-summary .game-rating {
-  color: #d4af37;
+.rating-summary .stars {
+  color: #c9a24a;
+  font-size: 20px;
+  /* 16 → 20 */
+}
+
+/* 기존 .divider 요소 사용 안 함 - CSS border로 대체 */
+.rating-summary .divider {
+  display: none;
 }
 
 /* Synopsis */
 .game-synopsis {
-  margin: 32px 0;
+  margin: 0 0 32px;
+  margin-bottom: 80px;
 }
 
-.synopsis-title {
-  font-family: 'Cinzel', Georgia, serif;
-  font-size: 0.75rem;
-  color: #d4af37;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
+.synopsis-title,
+.reviews-title {
+  font-family: 'Cinzel', serif;
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  color: #c9a24a;
   margin-bottom: 12px;
+  text-transform: uppercase;
 }
 
 .synopsis-text {
-  color: #c4b596;
-  line-height: 1.7;
-  font-size: 0.95rem;
+  font-family: 'Noto Serif KR', Georgia, serif;
+  font-size: 15px;
+  line-height: 1.85;
+  color: #c9bfa8;
 }
 
 /* Reviews Header */
@@ -355,25 +581,17 @@ h1:not(.hero-title) {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 32px 0 20px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid #2a2318;
-}
-
-.reviews-title {
-  font-family: 'Cinzel', Georgia, serif;
-  font-size: 0.75rem;
-  color: #d4af37;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
+  margin: 0 0 20px;
+  padding: 0;
+  border: none;
 }
 
 .reviews-header button {
   background: transparent;
-  color: #d4af37;
-  border: 1px solid #d4af37;
+  color: #c9a24a;
+  border: 1px solid #c9a24a;
   padding: 8px 20px;
-  font-family: 'Cinzel', Georgia, serif;
+  font-family: 'Cinzel', serif;
   font-size: 0.75rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -382,63 +600,83 @@ h1:not(.hero-title) {
 }
 
 .reviews-header button:hover {
-  background: #d4af37;
-  color: #0a0806;
+  background: #c9a24a;
+  color: #0b0a08;
 }
 
-/* Review Items */
+/* Review Items - 아바타 포함 */
 .game-reviews {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 0;
 }
 
 .review-item {
-  padding: 16px 0;
-  border-bottom: 1px solid #1a1510;
-  display: grid;
-  grid-template-columns: 40px 1fr auto;
-  gap: 16px;
-  align-items: start;
+  padding: 18px 0;
+  border-top: 1px solid #241f16;
+  border-bottom: none;
+  display: block;
+  /* 기존 grid 초기화 */
 }
 
 .review-item::before {
-  content: "";
-  width: 36px;
-  height: 36px;
+  content: none;
+  /* 기존 원형 이니셜 제거 (아래에서 실제 요소로 대체) */
+}
+
+.review-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.review-author-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.review-avatar {
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
-  background: rgba(212, 175, 55, 0.1);
-  border: 1px solid #d4af37;
-  color: #d4af37;
+  background: #2a241a;
+  border: 1px solid #3a3226;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Cinzel', Georgia, serif;
-  grid-row: 1 / 3;
+  font-family: 'Cinzel', serif;
+  font-size: 12px;
+  color: #c9a24a;
 }
 
 .reviews-author {
-  font-family: 'Cinzel', Georgia, serif;
-  color: #f4e4bc;
-  font-size: 0.95rem;
-  letter-spacing: 0.05em;
-  grid-column: 2;
+  font-family: 'Noto Serif KR', Georgia, serif;
+  font-size: 14px;
+  color: #ede0bd;
+  font-weight: 600;
+  grid-column: auto;
+  /* 기존 grid 초기화 */
 }
 
 .review-rateStar {
-  color: #d4af37;
-  font-size: 0.85rem;
-  grid-column: 3;
-  grid-row: 1;
+  color: #c9a24a;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  grid-column: auto;
+  grid-row: auto;
 }
 
 .review-content {
-  color: #c4b596;
-  font-style: italic;
-  font-size: 0.9rem;
-  line-height: 1.5;
-  grid-column: 2 / 4;
-  padding-top: 4px;
+  font-family: 'Noto Serif KR', Georgia, serif;
+  font-size: 14px;
+  line-height: 1.75;
+  color: #a89b7f;
+  font-style: normal;
+  padding: 0;
+  grid-column: auto;
+  grid-row: auto;
 }
 
 .review-content::before {
@@ -449,25 +687,28 @@ h1:not(.hero-title) {
   content: '"';
 }
 
-/* 닫기 버튼 */
-.close-btn {
-  position: absolute;
-  top: 20px;
-  right: 20px;
+/* 리뷰 삭제 버튼 - 오른쪽 정렬 */
+.delete-review-btn {
   background: transparent;
-  color: #d4af37;
-  border: 1px solid #d4af37;
-  width: 36px;
-  height: 36px;
+  display: block;
+  color: #7a6f5a;
+  border: 1px solid #241f16;
+  padding: 4px 12px;
+  font-family: 'Cinzel', serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
   cursor: pointer;
-  z-index: 10;
   transition: all 0.3s ease;
-  font-size: 1rem;
+  margin-left: auto;
+  margin-top: 8px;
+  grid-column: auto;
+  grid-row: auto;
+  align-self: auto;
 }
 
-.close-btn:hover {
-  background: #d4af37;
-  color: #0a0806;
+.delete-review-btn:hover {
+  color: #ff6b6b;
+  border-color: #ff6b6b;
 }
 
 /* ========== 리뷰 폼 모달 ========== */
@@ -483,8 +724,8 @@ h1:not(.hero-title) {
 }
 
 .review-form-modal .modal-content {
-  background: #0a0806;
-  border: 1px solid #2a2318;
+  background: #0b0a08;
+  border: 1px solid #3a3226;
   padding: 48px;
   max-width: 500px;
   width: 100%;
@@ -494,7 +735,7 @@ h1:not(.hero-title) {
 .review-form-modal h2 {
   font-family: 'Cinzel', Georgia, serif;
   font-size: 1.4rem;
-  color: #f4e4bc;
+  color: #ede0bd;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   text-align: center;
@@ -513,8 +754,8 @@ h1:not(.hero-title) {
 .review-form select,
 .review-form textarea {
   background: rgba(20, 15, 10, 0.6);
-  border: 1px solid #2a2318;
-  color: #e8dcc4;
+  border: 1px solid #3a3226;
+  color: #d8cfbf;
   padding: 12px 16px;
   font-family: Georgia, serif;
   font-size: 0.95rem;
@@ -525,7 +766,7 @@ h1:not(.hero-title) {
 .review-form select:focus,
 .review-form textarea:focus {
   outline: none;
-  border-color: #d4af37;
+  border-color: #c9a24a;
 }
 
 .review-form textarea {
@@ -536,8 +777,8 @@ h1:not(.hero-title) {
 
 .review-form button {
   background: transparent;
-  color: #d4af37;
-  border: 1px solid #d4af37;
+  color: #c9a24a;
+  border: 1px solid #c9a24a;
   padding: 14px;
   font-family: 'Cinzel', Georgia, serif;
   font-size: 0.85rem;
@@ -549,21 +790,21 @@ h1:not(.hero-title) {
 }
 
 .review-form button:hover {
-  background: #d4af37;
-  color: #0a0806;
+  background: #c9a24a;
+  color: #0b0a08;
 }
 
 /* placeholder */
 .review-form input::placeholder,
 .review-form textarea::placeholder {
-  color: #6b5c40;
+  color: #7a6f5a;
   font-style: italic;
 }
 
 .delete-review-btn {
   background: transparent;
-  color: #6b5c40;
-  border: 1px solid #2a2318;
+  color: #7a6f5a;
+  border: 1px solid #3a3226;
   padding: 4px 12px;
   font-family: 'Cinzel', Georgia, serif;
   font-size: 0.7rem;
@@ -590,8 +831,8 @@ h1:not(.hero-title) {
 
 .genre-filter button {
   background: transparent;
-  color: #6b5c40;
-  border: 1px solid #2a2318;
+  color: #7a6f5a;
+  border: 1px solid #3a3226;
   padding: 8px 20px;
   font-family: 'Cinzel', Georgia, serif;
   font-size: 0.75rem;
@@ -602,14 +843,14 @@ h1:not(.hero-title) {
 }
 
 .genre-filter button:hover {
-  color: #d4af37;
-  border-color: #d4af37;
+  color: #c9a24a;
+  border-color: #c9a24a;
 }
 
 .genre-filter button.active {
-  background: #d4af37;
-  color: #0a0806;
-  border-color: #d4af37;
+  background: #c9a24a;
+  color: #0b0a08;
+  border-color: #c9a24a;
 }
 
 /* 정렬 */
@@ -622,8 +863,8 @@ h1:not(.hero-title) {
 
 .sort-buttons button {
   background: transparent;
-  color: #6b5c40;
-  border: 1px solid #2a2318;
+  color: #7a6f5a;
+  border: 1px solid #3a3226;
   padding: 6px 16px;
   font-family: 'Cinzel', Georgia, serif;
   font-size: 0.7rem;
@@ -633,338 +874,746 @@ h1:not(.hero-title) {
 }
 
 .sort-buttons button:hover {
-  color: #d4af37;
-  border-color: #d4af37;
+  color: #c9a24a;
+  border-color: #c9a24a;
 }
 
 .sort-buttons button.active {
-  background: #d4af37;
-  color: #0a0806;
-  border-color: #d4af37;
+  background: #c9a24a;
+  color: #0b0a08;
+  border-color: #c9a24a;
 }
 
 /* 네비게이션 부분 */
 .top-nav {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    align-items: center;
-    padding: 20px 80px;
-    border-bottom: 1px solid #1a1510;
-    
-    /* Sticky */
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: rgba(10, 8, 6, 0.85);      /* 반투명 다크 */
-    backdrop-filter: blur(12px);            /* 뒤 흐리게 */
-    -webkit-backdrop-filter: blur(12px);
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding: 20px 80px;
+  border-bottom: 1px solid #14100c;
+
+  /* Sticky */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(10, 8, 6, 0.85);
+  /* 반투명 다크 */
+  backdrop-filter: blur(12px);
+  /* 뒤 흐리게 */
+  -webkit-backdrop-filter: blur(12px);
 }
 
 .nav-logo {
-    text-align: left;
+  text-align: left;
 }
 
 .nav-logo a {
-    font-family: 'Cinzel', Georgia, serif;
-    font-size: 1.2rem;
-    color: #f4e4bc;
-    letter-spacing: 0.15em;
-    text-decoration: none;
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 1.2rem;
+  color: #ede0bd;
+  letter-spacing: 0.15em;
+  text-decoration: none;
 }
 
 .nav-menu {
-    display: flex;
-    gap: 40px;
-    justify-content: center;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
 }
 
 .nav-menu a {
-    font-family: 'Cinzel', Georgia, serif;
-    font-size: 0.85rem;
-    color: #6b5c40;
-    letter-spacing: 0.15em;
-    text-decoration: none;
-    transition: color 0.3s ease;
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 0.85rem;
+  color: #7a6f5a;
+  letter-spacing: 0.15em;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .nav-menu a:hover {
-    color: #d4af37;
+  color: #c9a24a;
 }
 
 .nav-right {
-    text-align: right;
+  text-align: right;
 }
 
 .nav-right a {
-    font-family: 'Cinzel', Georgia, serif;
-    font-size: 0.85rem;
-    color: #d4af37;
-    letter-spacing: 0.15em;
-    text-decoration: none;
-    transition: opacity 0.3s ease;
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 0.85rem;
+  color: #c9a24a;
+  letter-spacing: 0.15em;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
 }
 
 .nav-right a:hover {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
 /* 관리자 페이지 */
 .admin-item {
-    display: grid;
-    grid-template-columns: 60px 1fr auto;
-    gap: 16px;
-    align-items: center;
-    padding: 16px 20px;
-    background: rgba(20, 15, 10, 0.5);
-    border: 1px solid #2a2318;
-    cursor: pointer;
-    transition: all 0.3s ease;
+  display: grid;
+  grid-template-columns: 60px 1fr auto;
+  gap: 16px;
+  align-items: center;
+  padding: 16px 20px;
+  background: rgba(20, 15, 10, 0.5);
+  border: 1px solid #3a3226;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .admin-item:hover {
-    border-color: #d4af37;
-    background: rgba(20, 15, 10, 0.8);
+  border-color: #c9a24a;
+  background: rgba(20, 15, 10, 0.8);
 }
 
 .admin-thumb {
-    width: 60px;
-    height: 60px;
-    object-fit: cover;
-    background: #1a1510;
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  background: #14100c;
 }
 
 .admin-item-info {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .admin-title {
-    font-family: 'Cinzel', Georgia, serif;
-    color: #f4e4bc;
-    font-size: 1rem;
-    letter-spacing: 0.05em;
+  font-family: 'Cinzel', Georgia, serif;
+  color: #ede0bd;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
 }
 
 .admin-meta {
-    color: #6b5c40;
-    font-size: 0.85rem;
-    font-style: italic;
+  color: #7a6f5a;
+  font-size: 0.85rem;
+  font-style: italic;
 }
 
 .admin-arrow {
-    color: #6b5c40;
-    font-size: 1.5rem;
-    padding-right: 8px;
-    transition: color 0.3s ease;
+  color: #7a6f5a;
+  font-size: 1.5rem;
+  padding-right: 8px;
+  transition: color 0.3s ease;
 }
 
 .admin-item:hover .admin-arrow {
-    color: #d4af37;
+  color: #c9a24a;
 }
 
 .page-container-wide {
-    max-width: 1000px;           /* 1400px → 1000px 좁게 */
-    margin: 0 auto;
-    padding: 40px 40px;
+  max-width: 1000px;
+  /* 1400px → 1000px 좁게 */
+  margin: 0 auto;
+  padding: 40px 40px;
 }
 
 .admin-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 40px 0;
-    border-bottom: 1px solid #2a2318;
-    margin-bottom: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0;
+  border-bottom: 1px solid #3a3226;
+  margin-bottom: 32px;
 }
 
 .admin-header h1 {
-    font-family: 'Cinzel', Georgia, serif;
-    font-size: 2rem;
-    color: #f4e4bc;
-    letter-spacing: 0.15em;
-    padding: 0;
-    margin: 0;
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 2rem;
+  color: #ede0bd;
+  letter-spacing: 0.15em;
+  padding: 0;
+  margin: 0;
 }
 
 /* 카테고리 버튼 스타일 재활용 */
 .add-btn {
-    background: transparent;
-    color: #d4af37;
-    border: 1px solid #d4af37;
-    padding: 12px 32px;
-    font-family: 'Cinzel', Georgia, serif;
-    font-size: 0.85rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: all 0.3s ease;
+  background: transparent;
+  color: #c9a24a;
+  border: 1px solid #c9a24a;
+  padding: 12px 32px;
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .add-btn:hover {
-    background: #d4af37;
-    color: #0a0806;
+  background: #c9a24a;
+  color: #0b0a08;
 }
 
 /* 게임 등록 페이지 */
 /* ========== 게임 폼 ========== */
 .game-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .game-form label {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    color: #d4af37;
-    font-family: 'Cinzel', Georgia, serif;
-    font-size: 0.75rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #c9a24a;
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
 }
 
 .game-form input[type="number"]::-webkit-inner-spin-button,
 .game-form input[type="number"]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .game-form input,
 .game-form select,
 .game-form textarea {
-    background: rgba(20, 15, 10, 0.6);
-    border: 1px solid #2a2318;
-    color: #e8dcc4;
-    padding: 14px 18px;
-    font-family: Georgia, serif;
-    font-size: 1rem;
-    letter-spacing: 0;
-    text-transform: none;
-    transition: border-color 0.3s ease;
-    width: 100%;
+  background: rgba(20, 15, 10, 0.6);
+  border: 1px solid #3a3226;
+  color: #d8cfbf;
+  padding: 14px 18px;
+  font-family: Georgia, serif;
+  font-size: 1rem;
+  letter-spacing: 0;
+  text-transform: none;
+  transition: border-color 0.3s ease;
+  width: 100%;
 }
 
 .game-form input:focus,
 .game-form select:focus,
 .game-form textarea:focus {
-    outline: none;
-    border-color: #d4af37;
+  outline: none;
+  border-color: #c9a24a;
 }
 
 .game-form textarea {
-    min-height: 100px;
-    resize: none;         /* vertical → none */
+  min-height: 100px;
+  resize: none;
+  /* vertical → none */
 }
 
 .game-form input::placeholder,
 .game-form textarea::placeholder {
-    color: #6b5c40;
-    font-style: italic;
+  color: #7a6f5a;
+  font-style: italic;
 }
 
 .form-buttons {
-    display: flex;
-    gap: 16px;
-    justify-content: flex-end;
-    margin-top: 24px;
+  display: flex;
+  gap: 16px;
+  justify-content: flex-end;
+  margin-top: 24px;
 }
 
 .cancel-btn,
 .submit-btn {
-    padding: 12px 32px;
-    font-family: 'Cinzel', Georgia, serif;
-    font-size: 0.85rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    border: 1px solid #2a2318;
-    background: transparent;
-    color: #6b5c40;
+  padding: 12px 32px;
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid #3a3226;
+  background: transparent;
+  color: #7a6f5a;
 }
 
 .cancel-btn:hover {
-    border-color: #6b5c40;
-    color: #d4af37;
+  border-color: #7a6f5a;
+  color: #c9a24a;
 }
 
 .submit-btn {
-    border-color: #d4af37;
-    color: #d4af37;
+  border-color: #c9a24a;
+  color: #c9a24a;
 }
 
 .submit-btn:hover {
-    background: #d4af37;
-    color: #0a0806;
+  background: #c9a24a;
+  color: #0b0a08;
 }
 
 /* 게임 수정 페이지 */
 .delete-game-btn {
-    background: transparent;
-    color: #ff6b6b;
-    border: 1px solid #2a2318;
-    padding: 12px 32px;
-    font-family: 'Cinzel', Georgia, serif;
-    font-size: 0.85rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: all 0.3s ease;
+  background: transparent;
+  color: #ff6b6b;
+  border: 1px solid #3a3226;
+  padding: 12px 32px;
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .delete-game-btn:hover {
-    background: #ff6b6b;
-    color: #0a0806;
-    border-color: #ff6b6b;
+  background: #ff6b6b;
+  color: #0b0a08;
+  border-color: #ff6b6b;
 }
 
 /* BEST 페이지 */
 /* ========== 베스트 페이지 ========== */
 .best-header {
-    text-align: center;
-    padding: 80px 40px 40px;
+  text-align: center;
+  padding: 80px 40px 40px;
 }
 
 .best-subtitle {
-    color: #6b5c40;
-    font-style: italic;
-    font-size: 1rem;
-    margin-top: 16px;
+  color: #7a6f5a;
+  font-style: italic;
+  font-size: 1rem;
+  margin-top: 16px;
 }
 
 .best-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 24px;
-    padding: 40px 80px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 24px;
+  padding: 40px 80px;
 }
 
 .best-item {
-    position: relative;
+  position: relative;
 }
 
 .best-rank {
-    position: absolute;
-    top: -8px;
-    left: -8px;
-    background: #d4af37;
-    color: #0a0806;
-    font-family: 'Cinzel', Georgia, serif;
-    font-size: 1rem;
-    font-weight: bold;
-    padding: 6px 14px;
-    z-index: 5;
-    letter-spacing: 0.05em;
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  background: #c9a24a;
+  color: #0b0a08;
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 6px 14px;
+  z-index: 5;
+  letter-spacing: 0.05em;
 }
 
 /* Top 3 강조 */
 .best-item:nth-child(1) .best-rank,
 .best-item:nth-child(2) .best-rank,
 .best-item:nth-child(3) .best-rank {
-    background: linear-gradient(135deg, #d4af37 0%, #f4e4bc 100%);
-    box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
-    font-size: 1.2rem;
-    padding: 8px 16px;
+  background: linear-gradient(135deg, #c9a24a 0%, #ede0bd 100%);
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+  font-size: 1.2rem;
+  padding: 8px 16px;
+}
+
+/* 좋아요 */
+.game-card {
+  position: relative;
+  /* 자식 absolute 기준점 - 이미 있으면 생략 */
+}
+
+.like-btn {
+  position: absolute;
+  top: 248px;
+  bottom: 12px;
+  right: 12px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  color: #c9a24a;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  z-index: 2;
+}
+
+.like-btn:hover {
+  background: #c9a24a;
+  color: #0b0a08;
+  transform: scale(1.0);
+}
+
+/* 확인 모달 */
+.confirm-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  padding: 20px;
+}
+
+.confirm-content {
+  background: #0b0a08;
+  border: 1px solid #c9a24a;
+  padding: 40px 48px;
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+}
+
+.confirm-message {
+  font-family: 'Cinzel', Georgia, serif;
+  color: #ede0bd;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+/* 확인 모달 */
+.confirm-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.delete-confirm-btn {
+  background: transparent;
+  color: #ff6b6b;
+  border: 1px solid #ff6b6b;
+  padding: 12px 32px;
+  font-family: 'Cinzel', Georgia, serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.delete-confirm-btn:hover {
+  background: #ff6b6b;
+  color: #0b0a08;
+}
+
+/* 모달 사진 */
+.modal-swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.modal-swiper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* 좌우 화살표 */
+.modal-swiper .swiper-button-prev,
+.modal-swiper .swiper-button-next {
+  color: #c9a24a;
+  width: 32px;
+  height: 32px;
+  background: transparent;
+}
+
+.modal-swiper .swiper-button-prev:hover,
+.modal-swiper .swiper-button-next:hover {
+  background: transparent;
+  color: #0b0a08;
+  transform: scale(1.2);
+}
+
+.modal-swiper .swiper-button-prev::after,
+.modal-swiper .swiper-button-next::after {
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+}
+
+/* 페이지네이션 원 */
+.modal-swiper .swiper-pagination-bullet {
+  background: #7a6f5a;
+  opacity: 0.6;
+}
+
+.modal-swiper .swiper-pagination-bullet-active {
+  background: #c9a24a;
+  opacity: 1;
+}
+
+/* 반응형 */
+/* ========================================
+   반응형 - 태블릿 (≤900px)
+   ======================================== */
+@media (max-width: 900px) {
+    /* 히어로 */
+    .hero {
+        padding: 60px 24px 80px;
+        min-height: 480px;
+    }
+    .hero-title {
+        font-size: 3.5rem !important;
+    }
+    .hero-subtitle {
+        font-size: 0.9rem;
+    }
+
+    /* 네비게이션 */
+    .top-nav {
+        padding: 16px 24px;
+    }
+    .nav-menu {
+        gap: 20px;
+    }
+
+    /* 카드 그리드 */
+    .card-grid {
+        padding: 30px 24px;
+        gap: 16px;
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
+
+    /* 장르 필터 / 정렬 */
+    .genre-filter,
+    .sort-buttons {
+        padding: 16px 24px;
+        gap: 8px;
+    }
+
+    /* 상세 모달 */
+    .game-modal {
+        padding: 20px;
+    }
+    .game-modal .modal-content {
+        max-width: 100%;
+    }
+    .game-modal .game-detail {
+        padding: 30px 28px;
+    }
+    .game-modal .game-title {
+        font-size: 28px;
+    }
+    .rating-summary {
+        padding: 16px;
+    }
+    .rating-summary .value {
+        font-size: 26px;
+    }
+    .rating-summary .value-genre {
+        font-size: 20px;
+    }
+
+    /* 관리자 */
+    .page-container-wide {
+        padding: 24px;
+    }
+}
+
+/* ========================================
+   반응형 - 모바일 (≤600px)
+   ======================================== */
+@media (max-width: 600px) {
+    /* 히어로 */
+    .hero {
+        padding: 40px 16px 60px;
+        min-height: 380px;
+    }
+    .hero-title {
+        font-size: 2.2rem !important;
+        letter-spacing: 0.02em;
+    }
+    .hero-tagline {
+        font-size: 0.7rem;
+        letter-spacing: 0.25em;
+    }
+    .hero-subtitle {
+        font-size: 0.8rem;
+        line-height: 1.7;
+    }
+
+    /* 네비게이션 - 로고 축소 */
+    .top-nav {
+        padding: 12px 16px;
+        grid-template-columns: auto 1fr auto;
+    }
+    .nav-logo a {
+        font-size: 0.95rem;
+        letter-spacing: 0.1em;
+    }
+    .nav-menu {
+        gap: 12px;
+    }
+    .nav-menu a,
+    .nav-right a {
+        font-size: 0.7rem;
+        letter-spacing: 0.1em;
+    }
+
+    /* 카드 그리드 - 2열 */
+    .card-grid {
+        padding: 20px 12px;
+        gap: 12px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .card-title {
+        font-size: 14px;
+    }
+    .card-developer {
+        font-size: 11px;
+    }
+    .card-badge {
+        font-size: 9px;
+        padding: 3px 8px;
+    }
+    .card-body {
+        padding: 12px 12px 14px;
+    }
+
+    /* 장르 필터 - 스크롤 가능 */
+    .genre-filter {
+        padding: 12px 16px;
+        gap: 6px;
+        justify-content: flex-start;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+    .genre-filter::-webkit-scrollbar {
+        display: none;
+    }
+    .genre-filter button {
+        flex-shrink: 0;
+        padding: 6px 14px;
+        font-size: 0.7rem;
+    }
+
+    /* 정렬 버튼 */
+    .sort-buttons {
+        padding: 8px 16px 20px;
+        gap: 6px;
+        flex-wrap: wrap;
+    }
+    .sort-buttons button {
+        padding: 5px 12px;
+        font-size: 0.65rem;
+    }
+
+    /* 상세 모달 */
+    .game-modal {
+        padding: 0;
+        align-items: flex-start;
+    }
+    .game-modal .modal-content {
+        max-height: 100vh;
+        max-width: 100%;
+        border: none;
+    }
+    .game-modal .game-detail {
+        padding: 24px 20px;
+    }
+    .game-modal .game-title {
+        font-size: 22px;
+    }
+    .head-genre {
+        font-size: 10px;
+        letter-spacing: 0.25em;
+    }
+    .rating-summary {
+        padding: 14px 12px;
+    }
+    .rating-summary .label {
+        font-size: 9px;
+        letter-spacing: 0.2em;
+    }
+    .rating-summary .value {
+        font-size: 20px;
+    }
+    .rating-summary .value-genre {
+        font-size: 15px;
+    }
+    .rating-summary .stars {
+        font-size: 14px;
+    }
+    .synopsis-text {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+    .close-btn {
+        top: 12px;
+        right: 12px;
+        width: 32px;
+        height: 32px;
+    }
+
+    /* 리뷰 */
+    .review-item {
+        padding: 14px 0;
+    }
+    .review-name,
+    .reviews-author {
+        font-size: 13px;
+    }
+    .review-text,
+    .review-content {
+        font-size: 13px;
+    }
+
+    /* 리뷰 폼 모달 */
+    .review-form-modal .modal-content {
+        padding: 24px 20px;
+    }
+
+    /* 관리자 */
+    .page-container-wide {
+        padding: 16px;
+    }
+    .admin-header {
+        padding: 24px 0;
+        flex-direction: column;
+        gap: 16px;
+        align-items: flex-start;
+    }
+    .admin-header h1 {
+        font-size: 1.4rem;
+    }
+    .game-form label {
+        font-size: 0.7rem;
+    }
+    .game-form input,
+    .game-form select,
+    .game-form textarea {
+        padding: 12px 14px;
+        font-size: 0.9rem;
+    }
+    .form-buttons {
+        flex-direction: column-reverse;
+    }
+    .form-buttons button {
+        width: 100%;
+    }
+
+    /* Admin 리스트 */
+    .admin-item {
+        padding: 12px 14px;
+        gap: 12px;
+    }
+    .admin-thumb {
+        width: 48px;
+        height: 48px;
+    }
+    .admin-title {
+        font-size: 0.9rem;
+    }
+    .admin-meta {
+        font-size: 0.75rem;
+    }
 }

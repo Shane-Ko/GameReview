@@ -5,7 +5,7 @@ import type { Genre } from "../types";
 export default function GameNew() {
     const navigate = useNavigate();
     const [genres, setGenres] = useState<Genre[]>([]);
-    
+
     // 폼 입력 상태
     const [title, setTitle] = useState("");
     const [developer, setDeveloper] = useState("");
@@ -14,8 +14,8 @@ export default function GameNew() {
     const [image, setImage] = useState("");
     const [genreId, setGenreId] = useState<number>(1);
     const [tags, setTags] = useState("");
+    const [modalImages, setModalImages] = useState("");
 
-    // 장르 목록 (드롭다운용)
     useEffect(() => {
         fetch("http://localhost:3000/genres")
             .then(res => res.json())
@@ -28,8 +28,11 @@ export default function GameNew() {
             return;
         }
 
-        // 태그 문자열 → 배열
         const tagsArray = tags.split(",").map(t => t.trim()).filter(Boolean);
+        const modalImagesArray = modalImages
+            .split(",")
+            .map(s => s.trim())
+            .filter(Boolean);
 
         const newGame = {
             genreId: Number(genreId),
@@ -38,9 +41,13 @@ export default function GameNew() {
             releaseYear: Number(releaseYear) || new Date().getFullYear(),
             description,
             image,
+            modalImages: modalImagesArray.length > 0 ? modalImagesArray : [image, image, image],
             rating: 0,
             reviewCount: 0,
             tags: tagsArray,
+            likeCount: 0,
+            isLiked: false,
+            isSaved: false,
         };
 
         const res = await fetch("http://localhost:3000/games", {
@@ -50,7 +57,7 @@ export default function GameNew() {
         });
 
         if (res.ok) {
-            navigate("/admin");   // 관리자 페이지로 이동
+            navigate("/admin");
         }
     };
 
@@ -63,7 +70,7 @@ export default function GameNew() {
             <div className="game-form">
                 <label>
                     제목 *
-                    <input 
+                    <input
                         type="text"
                         placeholder="게임 제목"
                         value={title}
@@ -73,7 +80,7 @@ export default function GameNew() {
 
                 <label>
                     개발사 *
-                    <input 
+                    <input
                         type="text"
                         placeholder="개발사"
                         value={developer}
@@ -83,7 +90,7 @@ export default function GameNew() {
 
                 <label>
                     출시년도
-                    <input 
+                    <input
                         type="number"
                         placeholder="2024"
                         value={releaseYear}
@@ -102,7 +109,7 @@ export default function GameNew() {
 
                 <label>
                     설명
-                    <textarea 
+                    <textarea
                         placeholder="게임 설명"
                         value={description}
                         onChange={e => setDescription(e.target.value)}
@@ -110,8 +117,8 @@ export default function GameNew() {
                 </label>
 
                 <label>
-                    이미지 경로
-                    <input 
+                    대표 이미지 경로
+                    <input
                         type="text"
                         placeholder="/images/example.png"
                         value={image}
@@ -120,8 +127,18 @@ export default function GameNew() {
                 </label>
 
                 <label>
+                    모달 이미지 (콤마로 구분, 여러 장 - 비우면 대표 이미지 사용)
+                    <input
+                        type="text"
+                        value={modalImages}
+                        onChange={e => setModalImages(e.target.value)}
+                        placeholder="/images/game_1.png, /images/game_2.png, /images/game_3.png"
+                    />
+                </label>
+
+                <label>
                     태그 (콤마로 구분)
-                    <input 
+                    <input
                         type="text"
                         placeholder="오픈월드, 스토리, 싱글플레이"
                         value={tags}
@@ -130,13 +147,13 @@ export default function GameNew() {
                 </label>
 
                 <div className="form-buttons">
-                    <button 
+                    <button
                         className="cancel-btn"
                         onClick={() => navigate("/admin")}
                     >
                         취소
                     </button>
-                    <button 
+                    <button
                         className="submit-btn"
                         onClick={handleSubmit}
                     >

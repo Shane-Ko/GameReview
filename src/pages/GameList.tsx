@@ -2,14 +2,21 @@ import { useEffect, useState } from "react";
 import type { Game, Genre, Review } from "../types";
 import GameCard from "../components/GameCard";
 import GameDetailModal from "../components/GameDetailModal";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, EffectFade, Pagination } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/effect-fade';
+import 'swiper/css/pagination';
 
 export default function GameList() {
-  // 1. games라는 상태 변수 만들었음 (처음엔 빈 배열 [])
   const [games, setGames] = useState<Game[]>([]);
   const [genres, setGenres] = useState<Genre[]>([]);
   const [reviews, setReviews] = useState<Review[]>([]);
   const [selectedGame, setSelectedGame] = useState<Game | null>(null);
   const [selectedGenreId, setSelectedGenreId] = useState<number | null>(null);
+  const [showLikedOnly, setShowLikedOnly] = useState(false);
+  const [sortBy, setSortBy] = useState<"none" | "rating" | "reviewCount">("none");
+
   const fetchReviews = () => {
     fetch("http://localhost:3000/reviews")
       .then(res => res.json())
@@ -27,52 +34,72 @@ export default function GameList() {
     fetchReviews();
   };
 
-  // 정렬
-  const filteredGames = selectedGenreId === null
-    ? games
-    : games.filter(g => Number(g.genreId) === Number(selectedGenreId));
-  const [sortBy, setSortBy] = useState<"none" | "rating" | "reviewCount">("none");
+  // 필터 + 정렬
+  const filteredGames = games
+    .filter(g => selectedGenreId === null || Number(g.genreId) === Number(selectedGenreId))
+    .filter(g => !showLikedOnly || g.isLiked);
+
   const sortedGames = [...filteredGames].sort((a, b) => {
     if (sortBy === "rating") return b.rating - a.rating;
     if (sortBy === "reviewCount") return b.reviewCount - a.reviewCount;
-    return 0;  // 기본순
+    return a.title.localeCompare(b.title);
   });
 
+  const handleLikeChange = (id: string | number, liked: boolean) => {
+    setGames(prev => prev.map(g => g.id === id ? { ...g, isLiked: liked } : g));
+  };
 
-
-
-  // 2️. 컴포넌트가 화면에 뜨자마자 실행 (useEffect)
+  const heroImages = [
+    '/hero/zelda_BotW.png',
+    '/hero/monster_hunter_WB.png',
+    '/hero/rdr2_2.png',
+    '/hero/witcher3_1.png',
+    '/hero/meccha_1.png',
+  ];
 
   useEffect(() => {
     fetchGames();
-    fetch("http://localhost:3000/genres")   //3. json-server 에 요청하기
-      .then(res => res.json())              //4. JSON 으로 변환
+    fetch("http://localhost:3000/genres")
+      .then(res => res.json())
       .then(setGenres);
     fetchReviews();
   }, []);
 
-  // 6. games 에 db.json의 30개 게임들이 들어와있는 상태
   return (
-
     <div>
       <section className="hero">
-        <p className="hero-tagline">— A CHRONICLE OF WORLDS —</p>
-        <h1 className="hero-title">
-          THE REVIEWER'S<br />
-          CODEX
-        </h1>
-        <p className="hero-subtitle">
-          깊이 있는 리뷰와 별점, 그리고 커뮤니티가 남긴 흔적들.<br />
-          당신의 다음 모험을 여기서 찾으세요.
-        </p>
-        <div className="hero-buttons">
-          <a href="#games" className="hero-btn primary">EXPLORE REVIEWS</a>
-          <a href="#games" className="hero-btn">TOP RATED</a>
+        <Swiper
+          modules={[Autoplay, EffectFade, Pagination]}
+          effect="fade"
+          autoplay={{ delay: 5000, disableOnInteraction: false }}
+          loop
+          pagination={{ clickable: true }}
+          className="hero-swiper"
+        >
+          {heroImages.map((src, i) => (
+            <SwiperSlide key={i}>
+              <div
+                className="hero-slide"
+                style={{ backgroundImage: `url(${src})` }}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+
+        <div className="hero-content">
+          <p className="hero-tagline">— NO REFUNDS AFTER 120 MINS —</p>
+          <h1 className="hero-title">
+            THE REVIEWER'S<br />
+            CODEX
+          </h1>
+          <p className="hero-subtitle">
+            깊이 있는 리뷰와 별점, 그리고 커뮤니티가 남긴 흔적들.<br />
+            당신의 다음 모험을 여기서 찾으세요.
+          </p>
         </div>
       </section>
-      <h1>게임 목록 ({games.length}개)</h1>
 
-      {/* 카테고리, 장르 필터 */}
+      {/* 장르 필터 */}
       <div className="genre-filter">
         <button
           className={selectedGenreId === null ? "active" : ""}
@@ -91,7 +118,7 @@ export default function GameList() {
         ))}
       </div>
 
-      {/* 정렬 토글 */}
+      {/* 정렬 + 찜 토글 */}
       <div className="sort-buttons">
         <button
           className={sortBy === "none" ? "active" : ""}
@@ -111,15 +138,22 @@ export default function GameList() {
         >
           리뷰 많은순
         </button>
+        <button
+          className={showLikedOnly ? "active" : ""}
+          onClick={() => setShowLikedOnly(!showLikedOnly)}
+        >
+          {showLikedOnly ? "⭐ 찜목록" : "☆ 찜목록"}
+        </button>
       </div>
 
-      <div className="game-grid">
-        {/* map 돌면서  */}
+      <div className="card-grid">     {/* ← game-grid → card-grid */}
         {sortedGames.map(game => (
           <GameCard
             key={game.id}
-            game={game}       // game 을 통째로 넘겨줘야 한다
+            game={game}
+            genre={genres.find(g => Number(g.id) === Number(game.genreId))}
             onClick={() => setSelectedGame(game)}
+            onLikeChange={handleLikeChange}
           />
         ))}
       </div>

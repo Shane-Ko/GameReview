@@ -76,11 +76,11 @@ export default function ReviewForm({ gameId, onSubmitted }: Props) {
 
             {/* 별점 select */}
             <select value={rating} onChange={e => setRating(Number(e.target.value))}>
-                <option value={5}>⭐⭐⭐⭐⭐</option>
-                <option value={4}>⭐⭐⭐⭐</option>
-                <option value={3}>⭐⭐⭐</option>
-                <option value={2}>⭐⭐</option>
-                <option value={1}>⭐</option>
+                <option value={5}>★★★★★</option>
+                <option value={4}>★★★★</option>
+                <option value={3}>★★★</option>
+                <option value={2}>★★</option>
+                <option value={1}>★</option>
             </select>
 
             {/* 플레이시간 input */}

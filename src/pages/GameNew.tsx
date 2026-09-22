@@ -17,7 +17,7 @@ export default function GameNew() {
     const [modalImages, setModalImages] = useState("");
 
     useEffect(() => {
-        fetch("http://localhost:3000/genres")
+        fetch("/genres")
             .then(res => res.json())
             .then(setGenres);
     }, []);
@@ -50,7 +50,7 @@ export default function GameNew() {
             isSaved: false,
         };
 
-        const res = await fetch("http://localhost:3000/games", {
+        const res = await fetch("/games", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(newGame),

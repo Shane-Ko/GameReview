@@ -6,7 +6,7 @@ export default function Admin() {
     const navigate = useNavigate();
     const [games, setGames] = useState<Game[]>([]);
     useEffect(() => {
-        fetch("http://localhost:3000/games")
+        fetch("/games")
             .then(res => res.json())
             .then(data => {
                 // 제목 알파벳 오름차순 정렬

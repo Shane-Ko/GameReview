@@ -21,12 +21,12 @@ export default function GameEdit() {
     // 초기 데이터 로드
     useEffect(() => {
         // 장르 목록
-        fetch("http://localhost:3000/genres")
+        fetch("/genres")
             .then(res => res.json())
             .then(setGenres);
 
         // 기존 게임 데이터 → 폼에 채우기
-        fetch(`http://localhost:3000/games/${id}`)
+        fetch(`/games/${id}`)
             .then(res => res.json())
             .then(game => {
                 setTitle(game.title);
@@ -57,7 +57,7 @@ export default function GameEdit() {
             tags: tagsArray,
         };
 
-        const res = await fetch(`http://localhost:3000/games/${id}`, {
+        const res = await fetch(`/games/${id}`, {
             method: "PATCH",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(updatedGame),
@@ -76,13 +76,13 @@ export default function GameEdit() {
     // 모달에서 "삭제" 눌렀을 때 실제 삭제
     const handleDeleteConfirm = async () => {
         // 관련 리뷰 삭제
-        const reviewsRes = await fetch(`http://localhost:3000/reviews?gameId=${id}`);
+        const reviewsRes = await fetch(`/reviews?gameId=${id}`);
         const gameReviews = await reviewsRes.json();
         for (const review of gameReviews) {
-            await fetch(`http://localhost:3000/reviews/${review.id}`, { method: "DELETE" });
+            await fetch(`/reviews/${review.id}`, { method: "DELETE" });
         }
         // 게임 삭제
-        await fetch(`http://localhost:3000/games/${id}`, { method: "DELETE" });
+        await fetch(`/games/${id}`, { method: "DELETE" });
         navigate("/admin");
     };
 

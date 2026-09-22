@@ -51,16 +51,16 @@ export default function GameDetailModal({ game, genre, reviews, onReview, onClos
     const handleDeleteConfirm = async () => {
         if (deleteTargetId === null) return;
 
-        await fetch(`http://localhost:3000/reviews/${deleteTargetId}`, { method: "DELETE" });
+        await fetch(`/reviews/${deleteTargetId}`, { method: "DELETE" });
 
-        const reviewsRes = await fetch(`http://localhost:3000/reviews?gameId=${game.id}`);
+        const reviewsRes = await fetch(`/reviews?gameId=${game.id}`);
         const remainingReviews = await reviewsRes.json();
 
         const avgRating = remainingReviews.length > 0
             ? remainingReviews.reduce((sum: number, r: any) => sum + r.rating, 0) / remainingReviews.length
             : 0;
 
-        await fetch(`http://localhost:3000/games/${game.id}`, {
+        await fetch(`/games/${game.id}`, {
             method: "PATCH",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({

@@ -5,13 +5,18 @@ from pydantic import BaseModel
 from typing import Literal
 import httpx
 import json
+import os
 
 
-OLLAMA_URL = "http://localhost:11434"  # PuTTY 터널 (L5512 → 서버 localhost:11434)
-MODEL_NAME = "qwen2.5:7b"
-ALLOWED_ORIGINS = ["http://localhost:5173"]
+# 로컬 개발 기본값은 PuTTY 터널(L5512 → 서버 localhost:11434).
+# 클러스터에서는 환경변수로 덮어쓴다.
+OLLAMA_URL = os.getenv("OLLAMA_URL", "http://localhost:11434")
+MODEL_NAME = os.getenv("MODEL_NAME", "qwen2.5:7b")
+# 같은 오리진에서 서빙되면 CORS 자체가 불필요하므로 기본값은 개발용 Vite 주소만 둔다.
+ALLOWED_ORIGINS = os.getenv("ALLOWED_ORIGINS", "http://localhost:5173").split(",")
+DB_PATH = os.getenv("DB_PATH", "../db.json")
 
-with open("../db.json", "r", encoding="utf-8") as f:
+with open(DB_PATH, "r", encoding="utf-8") as f:
     raw = json.load(f)
 
 games_list = [

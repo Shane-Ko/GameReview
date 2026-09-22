@@ -30,7 +30,7 @@ export default function ReviewForm({ gameId, onSubmitted }: Props) {
         };
 
         // 1. 리뷰 등록
-        const res = await fetch("http://localhost:3000/reviews", {
+        const res = await fetch("/reviews", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(newReview),
@@ -38,7 +38,7 @@ export default function ReviewForm({ gameId, onSubmitted }: Props) {
 
         if (res.ok) {
             // 2. 이 게임의 모든 리뷰 다시 가져오기
-            const reviewsRes = await fetch(`http://localhost:3000/reviews?gameId=${gameId}`);
+            const reviewsRes = await fetch(`/reviews?gameId=${gameId}`);
             const allReviews = await reviewsRes.json();
 
             // 3. 평균 계산
@@ -46,7 +46,7 @@ export default function ReviewForm({ gameId, onSubmitted }: Props) {
             const reviewCount = allReviews.length;
 
             // 4. game 업데이트 (PATCH)
-            await fetch(`http://localhost:3000/games/${gameId}`, {
+            await fetch(`/games/${gameId}`, {
                 method: "PATCH",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({

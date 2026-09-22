@@ -18,13 +18,13 @@ export default function GameList() {
   const [sortBy, setSortBy] = useState<"none" | "rating" | "reviewCount">("none");
 
   const fetchReviews = () => {
-    fetch("http://localhost:3000/reviews")
+    fetch("/reviews")
       .then(res => res.json())
       .then(setReviews);
   };
 
   const fetchGames = () => {
-    fetch("http://localhost:3000/games")
+    fetch("/games")
       .then(res => res.json())
       .then(setGames);
   };
@@ -59,7 +59,7 @@ export default function GameList() {
 
   useEffect(() => {
     fetchGames();
-    fetch("http://localhost:3000/genres")
+    fetch("/genres")
       .then(res => res.json())
       .then(setGenres);
     fetchReviews();

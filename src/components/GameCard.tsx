@@ -12,7 +12,7 @@ export default function GameCard({ game, genre, onClick, onLikeChange }: GameCar
     const handleLikeToggle = async (e: React.MouseEvent) => {
         e.stopPropagation();
         const newLiked = !game.isLiked;
-        await fetch(`http://localhost:3000/games/${game.id}`, {
+        await fetch(`/games/${game.id}`, {
             method: 'PATCH',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ isLiked: newLiked }),

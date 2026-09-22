@@ -12,13 +12,13 @@ export default function BestGames() {
     const [sortBy, setSortBy] = useState<"rating" | "reviewCount">("rating");
 
     const fetchGames = () => {
-        fetch("http://localhost:3000/games")
+        fetch("/games")
             .then(res => res.json())
             .then(setGames);
     };
 
     const fetchReviews = () => {
-        fetch("http://localhost:3000/reviews")
+        fetch("/reviews")
             .then(res => res.json())
             .then(setReviews);
     };
@@ -30,7 +30,7 @@ export default function BestGames() {
 
     useEffect(() => {
         fetchGames();
-        fetch("http://localhost:3000/genres").then(res => res.json()).then(setGenres);
+        fetch("/genres").then(res => res.json()).then(setGenres);
         fetchReviews();
     }, [sortBy]);   // sortBy 바뀌면 다시 fetch
 

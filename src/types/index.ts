@@ -29,3 +29,8 @@ export interface Review {
     playTime: number;
     createdAt: string;
 }
+
+export interface ChatMessage {
+    role: 'user' | 'assistant';
+    content: string;
+}

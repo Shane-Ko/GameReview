@@ -22,3 +22,11 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+".bkit/" 
+".omc/" 
+"backend/__pycache__/" 
+"*.pyc" 
+".bkit/" 
+".omc/" 
+"backend/__pycache__/" 
+"*.pyc" 

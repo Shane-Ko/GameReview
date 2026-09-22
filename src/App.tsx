@@ -6,6 +6,7 @@ import GameEdit from "./pages/GameEdit";
 import BestGames from "./pages/BestGames";
 import NotFound from "./pages/NotFound";
 import Admin from "./pages/Admin";
+import ChatBot from "./components/ChatBot";  // 추가
 import "./App.css";
 
 
@@ -24,6 +25,9 @@ function App() {
         <Route path="/best" element={<BestGames />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+
+
+        <ChatBot />  {/* 추가 */}
     </div>
   );
 }

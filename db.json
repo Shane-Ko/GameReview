@@ -795,28 +795,6 @@
         "/images/coc_zerohour.png",
         "/images/coc_zerohour.png"
       ]
-    },
-    {
-      "genreId": 1,
-      "title": "ㄹ",
-      "developer": "ㄹ",
-      "releaseYear": 2024,
-      "description": "ㅇ",
-      "image": "",
-      "modalImages": [
-        "",
-        "",
-        ""
-      ],
-      "rating": 5,
-      "reviewCount": 1,
-      "tags": [
-        "ㅇ"
-      ],
-      "likeCount": 0,
-      "isLiked": false,
-      "isSaved": false,
-      "id": 33
     }
   ],
   "genres": [
@@ -1695,15 +1673,6 @@
       "content": "sfsdfsdf",
       "playTime": 20202,
       "createdAt": "2026-07-23T06:03:39.734Z"
-    },
-    {
-      "gameId": 33,
-      "author": "ㅇ",
-      "rating": 5,
-      "content": "ㅇ",
-      "playTime": 1,
-      "createdAt": "2026-07-23T06:32:16.148Z",
-      "id": 91
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

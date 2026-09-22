@@ -1,5 +1,5 @@
 import type { Game } from "../types";
-import type { Genres } from "../types";
+import type { Genre } from "../types";
 import type { Review } from "../types";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
@@ -13,7 +13,7 @@ import 'swiper/css/pagination';
 
 interface Props {
     game: Game;
-    genre?: Genres;
+    genre?: Genre;
     reviews: Review[];   // 리뷰는 여러개니까 배열로 만들기
     onReview: () => void;
     onClose: () => void;

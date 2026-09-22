@@ -6,7 +6,9 @@ apiVersion: v1
 kind: Pod
 spec:
   containers:
-  - name: kaniko
+  # kaniko 는 빌드 중 컨테이너 루트 파일시스템을 베이스 이미지로 덮어쓴다.
+  # 따라서 한 컨테이너에서 두 번 실행할 수 없어 이미지마다 따로 둔다.
+  - name: kaniko-frontend
     image: gcr.io/kaniko-project/executor:v1.23.2-debug
     imagePullPolicy: IfNotPresent
     command:
@@ -20,6 +22,23 @@ spec:
       limits:
         memory: "2Gi"
         cpu: "2000m"
+    volumeMounts:
+    - name: kaniko-secret
+      mountPath: /kaniko/.docker
+  - name: kaniko-backend
+    image: gcr.io/kaniko-project/executor:v1.23.2-debug
+    imagePullPolicy: IfNotPresent
+    command:
+    - sleep
+    args:
+    - "9999999"
+    resources:
+      requests:
+        memory: "256Mi"
+        cpu: "100m"
+      limits:
+        memory: "1Gi"
+        cpu: "1000m"
     volumeMounts:
     - name: kaniko-secret
       mountPath: /kaniko/.docker
@@ -79,7 +98,7 @@ spec:
 
         stage('Build Frontend') {
             steps {
-                container('kaniko') {
+                container('kaniko-frontend') {
                     sh """
                         /kaniko/executor \
                           --context=\${WORKSPACE} \
@@ -93,7 +112,7 @@ spec:
 
         stage('Build Backend') {
             steps {
-                container('kaniko') {
+                container('kaniko-backend') {
                     sh """
                         /kaniko/executor \
                           --context=\${WORKSPACE}/backend \

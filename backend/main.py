@@ -15,6 +15,15 @@ MODEL_NAME = os.getenv("MODEL_NAME", "qwen2.5:7b")
 # 같은 오리진에서 서빙되면 CORS 자체가 불필요하므로 기본값은 개발용 Vite 주소만 둔다.
 ALLOWED_ORIGINS = os.getenv("ALLOWED_ORIGINS", "http://localhost:5173").split(",")
 DB_PATH = os.getenv("DB_PATH", "../db.json")
+# 클러스터에서는 Cloudflare Tunnel(Access 보호) 뒤의 ollama를 호출하므로 서비스 토큰을 헤더로 보낸다.
+# 로컬 개발(PuTTY 터널)에서는 비워 두면 헤더 없이 동작한다.
+CF_ACCESS_CLIENT_ID = os.getenv("CF_ACCESS_CLIENT_ID")
+CF_ACCESS_CLIENT_SECRET = os.getenv("CF_ACCESS_CLIENT_SECRET")
+OLLAMA_HEADERS = (
+    {"CF-Access-Client-Id": CF_ACCESS_CLIENT_ID, "CF-Access-Client-Secret": CF_ACCESS_CLIENT_SECRET}
+    if CF_ACCESS_CLIENT_ID and CF_ACCESS_CLIENT_SECRET
+    else {}
+)
 
 with open(DB_PATH, "r", encoding="utf-8") as f:
     raw = json.load(f)
@@ -76,7 +85,7 @@ async def chat(req: ChatRequest):
 
     async def stream():
         try:
-            async with httpx.AsyncClient(timeout=60) as client:
+            async with httpx.AsyncClient(timeout=120, headers=OLLAMA_HEADERS) as client:
                 async with client.stream(
                     "POST",
                     f"{OLLAMA_URL}/api/chat",
